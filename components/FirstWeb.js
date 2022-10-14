@@ -196,7 +196,7 @@ import * as Font from "expo-font";
 import { Dimensions } from "react-native";
 import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 
-const Resp = () => {
+const FirstWeb = () => {
   const { height, width } = Dimensions.get("window");
 
   const gotoHowitwork = () =>
@@ -361,7 +361,7 @@ const Resp = () => {
   );
 };
 
-export default Resp;
+export default FirstWeb;
 
 const styles = StyleSheet.create({
   image: {

@@ -13,7 +13,7 @@ import {
 } from "native-base";
 import { Dimensions } from "react-native";
 
-const Likhitha = () => {
+const Fourth = () => {
   const { height, width } = Dimensions.get("window");
 
   return (
@@ -1961,4 +1961,4 @@ const Likhitha = () => {
     </>
   );
 };
-export default Likhitha;
+export default Fourth;

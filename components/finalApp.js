@@ -16,7 +16,7 @@ import { AntDesign } from "@expo/vector-icons";
 import * as Font from "expo-font";
 import Example from "./staticFirst";
 import Test from "./test";
-import Tester from "./twoway";
+import Tester from "./FirstWeb";
 import { Dimensions } from "react-native";
 import Privacy from "./Privacy";
 import Tej from "./tej";
@@ -24,9 +24,10 @@ import Mobile from "./mobile";
 import Percent from "./percent";
 import Third from "./ThirdWeb";
 import Screen from "./second";
-import Likhitha from "./likhitha";
-import Plan from "./vijji";
-import Resp from "./twoway";
+import Fourth from "./FourthWeb";
+import FirstWeb from "./FirstWeb";
+import Plan from "./Plan";
+import Resp from "./FirstWeb";
 import "./styles/style.css";
 // import { NavigationContainer } from "@react-navigation/native";
 // // import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -39,10 +40,10 @@ const Final = ({ navigation }) => {
   return (
     <NativeBaseProvider>
       <VStack flex={1}>
-        <Resp />
+        <FirstWeb />
         <SecoundWeb />
         <Third />
-        <Likhitha />
+        <Fourth />
         <Plan />
         <Tej navigation={navigation} />
       </VStack>
