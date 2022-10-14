@@ -16,7 +16,7 @@ import Applestore from "./Applestore";
 import * as Font from "expo-font";
 import { vw, vh } from "react-native-expo-viewport-units";
 
-const App = () => {
+const Third = () => {
   return (
     <>
       <Box top={890} width={vw(100)}>
@@ -82,4 +82,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Third;

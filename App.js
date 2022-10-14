@@ -22,7 +22,7 @@ import Privacy from "./components/Privacy";
 import Tej from "./components/tej";
 import Mobile from "./components/mobile";
 import Percent from "./components/percent";
-import Chandu from "./components/chandu";
+import Chandu from "./components/ThirdWeb";
 import Screen from "./components/second";
 import Likhitha from "./components/likhitha";
 import Plan from "./components/vijji";

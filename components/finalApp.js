@@ -22,7 +22,7 @@ import Privacy from "./Privacy";
 import Tej from "./tej";
 import Mobile from "./mobile";
 import Percent from "./percent";
-import Chandu from "./chandu";
+import Third from "./ThirdWeb";
 import Screen from "./second";
 import Likhitha from "./likhitha";
 import Plan from "./vijji";
@@ -41,7 +41,7 @@ const Final = ({ navigation }) => {
       <VStack flex={1}>
         <Resp />
         <SecoundWeb />
-        <Chandu />
+        <Third />
         <Likhitha />
         <Plan />
         <Tej navigation={navigation} />
