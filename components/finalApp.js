@@ -19,14 +19,14 @@ import Example from "./staticFirst";
 import Tester from "./FirstWeb";
 import { Dimensions } from "react-native";
 import Privacy from "./Privacy";
-import Tej from "./tej";
+import SixthWeb from "./sixthWeb";
 import Mobile from "./mobile";
 import Percent from "./percent";
 import Third from "./ThirdWeb";
 import Screen from "./second";
 import Fourth from "./FourthWeb";
 import FirstWeb from "./FirstWeb";
-import Plan from "./vijji";
+import Plan from "./Plan";
 import Resp from "./FirstWeb";
 import "./styles/style.css";
 // import { NavigationContainer } from "@react-navigation/native";
@@ -45,7 +45,7 @@ const Final = ({ navigation }) => {
         <Third />
         <Fourth />
         <Plan />
-        <Tej navigation={navigation} />
+        <SixthWeb navigation={navigation} />
       </VStack>
     </NativeBaseProvider>
   );

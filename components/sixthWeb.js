@@ -26,7 +26,7 @@ import Terms from "./terms";
 import Getintouch from "./getintouch";
 const { height, width } = Dimensions.get("window");
 
-const App = ({ navigation }) => {
+const SixthWeb = ({ navigation }) => {
   const [index, setindex] = useState(1);
   return (
     <>
@@ -127,7 +127,7 @@ const App = ({ navigation }) => {
     </>
   );
 };
-export default App;
+export default SixthWeb;
 const styles = StyleSheet.create({
   whiteBg: {
     backgroundColor: "white",
