@@ -22,7 +22,7 @@ import {
   View,
 } from "native-base";
 
-import Okok from "./Okok";
+import Okok from "./Tick";
 import Buttonfordrive from "./lineargradient";
 const Plan = () => {
   return (
