@@ -26,7 +26,7 @@ import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 const Privacy = ({ navigation }) => {
   return (
     <NativeBaseProvider>
-      <Stack backgroundColor={"#FCFBFC"}>
+      <Stack backgroundColor={"white"}>
         <Stack zIndex={999}>
           <TopBar navigation={navigation} />
         </Stack>

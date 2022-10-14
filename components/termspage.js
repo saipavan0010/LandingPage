@@ -17,11 +17,11 @@ import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 const TnC = ({ navigation }) => {
   return (
     <NativeBaseProvider>
-      <Stack backgroundColor={"#FCFBFC"}>
+      <Stack backgroundColor={"white"}>
         <Stack>
-          <TopBar navigation={navigation}/>
+          <TopBar navigation={navigation} />
         </Stack>
-        <Center top={vh(12)}>
+        <Center top={vh(35)}>
           <Box width={"75%"}>
             <Center>
               <Heading style={Styles.title}>TERMS AND CONDITIONS</Heading>

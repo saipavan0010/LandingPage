@@ -10,7 +10,10 @@ const TopBar = ({ navigation }) => {
     <NativeBaseProvider>
       <Stack>
         <Stack style={styles.logo}>
+          {/* <Pressable onPress={navigation.navigate("Final")}> */}
+
           <Shadowlogo />
+          {/* </Pressable> */}
         </Stack>
 
         <Stack>

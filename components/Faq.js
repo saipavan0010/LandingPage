@@ -7,6 +7,7 @@ import {
   View,
   Stack,
   ScrollView,
+  VStack,
 } from "native-base";
 import { StyleSheet, Text } from "react-native";
 
@@ -62,12 +63,12 @@ const FAQs = ({ navigation }) => {
 
   return (
     <NativeBaseProvider>
-      <View>
-        <HStack zIndex={999}>
+      <Stack bgColor={"white"}>
+        <Stack>
           <TopBar navigation={navigation}></TopBar>
-        </HStack>
+        </Stack>
 
-        <ScrollView top={100}>
+        <ScrollView bgColor={"white"} top={100}>
           <Stack>
             <Box>
               <Text style={styless.title}>FAQs</Text>
@@ -85,7 +86,7 @@ const FAQs = ({ navigation }) => {
             </Stack>
           </Stack>
         </ScrollView>
-      </View>
+      </Stack>
     </NativeBaseProvider>
   );
 };

@@ -61,7 +61,7 @@ const App = ({ navigation }) => {
                         <Mailus />
                       </Link>
                     </Box>
-                    <Feelfree />
+                    <Feelfree navigation={navigation} />
                     <Divider mt={8} width={width * 0.9} />
                     <Box m={5}>
                       <Terms />
@@ -84,7 +84,7 @@ const App = ({ navigation }) => {
                           <Mailus />
                         </Link>
                         <Box ml={12}>
-                          <Feelfree />
+                          <Feelfree navigation={navigation} />
                         </Box>
                       </VStack>
                       <Box mt={4} ml={"20"} pl={10} mr={-8}>

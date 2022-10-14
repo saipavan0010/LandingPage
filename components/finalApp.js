@@ -38,12 +38,14 @@ import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 const Final = ({ navigation }) => {
   return (
     <NativeBaseProvider>
-      <Resp />
-      <SecoundWeb />
-      <Chandu />
-      <Likhitha />
-      <Plan />
-      <Tej  navigation={navigation} />
+      <VStack flex={1}>
+        <Resp />
+        <SecoundWeb />
+        <Chandu />
+        <Likhitha />
+        <Plan />
+        <Tej navigation={navigation} />
+      </VStack>
     </NativeBaseProvider>
   );
 };

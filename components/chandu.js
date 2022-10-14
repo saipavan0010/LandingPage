@@ -6,6 +6,7 @@ import {
   HStack,
   VStack,
   Image,
+  Link,
 } from "native-base";
 
 import PhoneWithBack from "./phone_with_background";
@@ -61,12 +62,19 @@ const App = () => {
           </Text>
 
           <HStack space={vw(3.5)} marginTop={vh(4.5)}>
-            <Box opacity={"100%"}>
+            {/* <Box opacity={"100%"}> */}
+            <Link
+              href="https://apps.apple.com/us/app/shadowproperties/id1491176685/"
+              isExternal
+            >
               <Applestore width={vw(13)} height={vh(10)} />
-            </Box>
-            <Box opacity={"100%"}>
+            </Link>
+            <Link
+              href="https://play.google.com/store/apps/details?id=and.app.properties.shadow"
+              isExternal
+            >
               <Googleplay width={vw(13)} height={vh(10)} />
-            </Box>
+            </Link>
           </HStack>
         </VStack>
       </Box>
