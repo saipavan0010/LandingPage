@@ -19,11 +19,11 @@ import { vw, vh } from "react-native-expo-viewport-units";
 const Third = () => {
   return (
     <>
-      <Box top={890} width={vw(100)}>
+      <Box top={890} width={vw}>
         <Box>
           <PhoneWithBack
             // width={vw(100)}
-            // height={vh(100)}
+            height={vh(120)}
             resizeMode="cover"
             overflow={"hidden"}
             opacity={"100%"}

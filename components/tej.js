@@ -14,6 +14,8 @@ import {
   Button,
   Pressable,
 } from "native-base";
+import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
+
 import { Dimensions, StyleSheet } from "react-native";
 import GetStarted from "./GetStartesCard";
 import Forminput from "./inputForm";
@@ -48,7 +50,8 @@ const App = ({ navigation }) => {
             height={height}
             width={width}
           />
-          <Box position={"absolute"} width={width}>
+          {/* <Center position={"absolute"}> */}
+          <Box position={"absolute"} width={width * 0.98}>
             <Box mt={height * 0.2} />
             {width < 800 ? (
               <>
@@ -100,7 +103,7 @@ const App = ({ navigation }) => {
                           h={"2pt"}
                           backgroundColor={"rgb(218,212,229)"}
                           width={width * 0.72}
-                          left={5}
+                          left={1}
                           mb={10}
                         />
                       </Center>
@@ -118,6 +121,7 @@ const App = ({ navigation }) => {
               </>
             )}
           </Box>
+          {/* </Center> */}
         </Box>
       </Box>
     </>

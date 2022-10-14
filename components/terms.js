@@ -26,7 +26,7 @@ const Terms = ({ navigation }) => {
 
           <Stack>
             <Divider
-              orientation="vertical"
+              orientation="vertical"  
               thickness={1}
               fontWeight="bold"
               bg="rgb(152,138,180)"
