@@ -11,6 +11,12 @@ import {
   Stack,
   View,
 } from "native-base";
+import { StyleSheet, ScrollView } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
+import * as Font from "expo-font";
+
+import { Dimensions } from "react-native";
+import Privacy from "./Privacy";
 import SixthWeb from "./sixthWeb";
 import Third from "./ThirdWeb";
 import FourthWeb from "./FourthWeb";
