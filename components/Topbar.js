@@ -44,6 +44,7 @@ const TopBar = ({ navigation }) => {
 
                     edit: true,
                   }),
+                  // data: toBottom.current.scrollToEnd(),
                 });
               }}
             >
@@ -72,10 +73,12 @@ const TopBar = ({ navigation }) => {
                 navigation.navigate("Final", {
                   data: window.scrollTo({
                     top: vh(1000),
+                    // top: document.documentElement.scrollHeight,
                     behavior: "smooth",
 
                     edit: true,
                   }),
+                  // data: Window.scrollByPages(-1),
                 });
               }}
             >

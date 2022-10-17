@@ -11,30 +11,18 @@ import {
   Stack,
   View,
 } from "native-base";
-import { StyleSheet, ScrollView } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
-import * as Font from "expo-font";
-import Example from "./staticFirst";
-// import Test from "./test";
-import Tester from "./FirstWeb";
-import { Dimensions } from "react-native";
-import Privacy from "./Privacy";
 import SixthWeb from "./sixthWeb";
-import Mobile from "./mobile";
-import Percent from "./percent";
 import Third from "./ThirdWeb";
-import Screen from "./second";
-import Fourth from "./FourthWeb";
+import FourthWeb from "./FourthWeb";
 import FirstWeb from "./FirstWeb";
 import Plan from "./Plan";
-import Resp from "./FirstWeb";
 import "./styles/style.css";
-// import { NavigationContainer } from "@react-navigation/native";
-// // import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Tej2 from "./info";
-import Forminput from "./inputForm";
 import SecoundWeb from "./SecoundWeb";
-import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
+import FirstMobile from "./firstscreen";
+import SecondMbl1 from "./SecondMobile";
+import ThirdFoldMBL from "./ThirdMobile";
+import FourthMobile from "./FourthMobile";
+import FifthMobile from "./FifthMobile";
 
 const Final = ({ navigation }) => {
   return (
@@ -43,9 +31,16 @@ const Final = ({ navigation }) => {
         <FirstWeb />
         <SecoundWeb />
         <Third />
-        <Fourth />
+        <FourthWeb />
         <Plan />
         <SixthWeb navigation={navigation} />
+      </VStack>
+      <VStack>
+        <FirstMobile />
+        <SecondMbl1 />
+        <ThirdFoldMBL />
+        <FourthMobile />
+        <FifthMobile />
       </VStack>
     </NativeBaseProvider>
   );

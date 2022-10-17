@@ -183,6 +183,7 @@ import {
   Button,
   Image,
   Pressable,
+  Hidden,
   HStack,
   VStack,
   Stack,
@@ -227,136 +228,138 @@ const FirstWeb = () => {
     });
   return (
     <>
-      <View flex={1} zIndex="999">
-        <Image
-          source={require("../assets/hero_image_updated.png")}
-          alt="Alternate Text"
-          width={vw(100)}
-          height={vh(100)}
-        />
-        <Image
-          //   style={styles.logo}
-          top={"3vh"}
-          left={"13vw"}
-          position={"absolute"}
-          source={require("../assets/logo_white.png")}
-          alt="Alternate Text"
-          // width={"8vw"}
-          // height={"14vh"}
-          size={"lg"}
-        />
-        <Text
-          fontFamily={"PoppinsSemiBold"}
-          position={"absolute"}
-          top={"30vh"}
-          left={"13vw"}
-          // textAlign={"left"}
-          height={"20vh"}
-          width={"50vw"}
-          justifyContent={"left"}
-          color={"#FFFFFF"}
-          fontSize={"8vh"}
-          //   style={styles.text}
-        >
-          {`The Simple Way \n to Start Real Estate \n Investing`}
-        </Text>
-        <Text
-          fontFamily={"PoppinsMedium"}
-          position={"absolute"}
-          // style={styles.navText1}
-          top={"8vh"}
-          left={"50vw"}
-          fontSize={"2vh"}
-          color={"#FFFFFF"}
-          onClick={gotoHowitwork}
-        >
-          How it works
-        </Text>
-        <Text
-          fontFamily={"PoppinsMedium"}
-          position={"absolute"}
-          // style={styles.navText2}
-          left={"60vw"}
-          top={"8vh"}
-          fontSize={"2vh"}
-          color={"#FFFFFF"}
-          onClick={gotofeatures}
-        >
-          Features
-        </Text>
-        <Text
-          fontFamily={"PoppinsMedium"}
-          position={"absolute"}
-          left={"67vw"}
-          top={"8vh"}
-          color={"#FFFFFF"}
-          fontSize={"2vh"}
-          // style={styles.navText3}
-          onClick={gotoPricing}
-        >
-          Pricing
-        </Text>
-        <Text
-          fontFamily={"PoppinsMedium"}
-          position={"absolute"}
-          left={"73vw"}
-          top={"8vh"}
-          color={"#FFFFFF"}
-          fontSize={"2vh"}
-          // style={styles.navText4}
-          onClick={gotocontacts}
-        >
-          Contact
-        </Text>
+      <Hidden only={["base", "sm", "md"]}>
+        <View flex={1} zIndex="999">
+          <Image
+            source={require("../assets/hero_image_updated.png")}
+            alt="Alternate Text"
+            width={vw(100)}
+            height={vh(100)}
+          />
+          <Image
+            //   style={styles.logo}
+            top={"3vh"}
+            left={"13vw"}
+            position={"absolute"}
+            source={require("../assets/logo_white.png")}
+            alt="Alternate Text"
+            // width={"8vw"}
+            // height={"14vh"}
+            size={"lg"}
+          />
+          <Text
+            fontFamily={"PoppinsSemiBold"}
+            position={"absolute"}
+            top={"30vh"}
+            left={"13vw"}
+            // textAlign={"left"}
+            height={"20vh"}
+            width={"50vw"}
+            justifyContent={"left"}
+            color={"#FFFFFF"}
+            fontSize={"8vh"}
+            //   style={styles.text}
+          >
+            {`The Simple Way \n to Start Real Estate \n Investing`}
+          </Text>
+          <Text
+            fontFamily={"PoppinsMedium"}
+            position={"absolute"}
+            // style={styles.navText1}
+            top={"8vh"}
+            left={"50vw"}
+            fontSize={"2vh"}
+            color={"#FFFFFF"}
+            onClick={gotoHowitwork}
+          >
+            How it works
+          </Text>
+          <Text
+            fontFamily={"PoppinsMedium"}
+            position={"absolute"}
+            // style={styles.navText2}
+            left={"60vw"}
+            top={"8vh"}
+            fontSize={"2vh"}
+            color={"#FFFFFF"}
+            onClick={gotofeatures}
+          >
+            Features
+          </Text>
+          <Text
+            fontFamily={"PoppinsMedium"}
+            position={"absolute"}
+            left={"67vw"}
+            top={"8vh"}
+            color={"#FFFFFF"}
+            fontSize={"2vh"}
+            // style={styles.navText3}
+            onClick={gotoPricing}
+          >
+            Pricing
+          </Text>
+          <Text
+            fontFamily={"PoppinsMedium"}
+            position={"absolute"}
+            left={"73vw"}
+            top={"8vh"}
+            color={"#FFFFFF"}
+            fontSize={"2vh"}
+            // style={styles.navText4}
+            onClick={gotocontacts}
+          >
+            Contact
+          </Text>
 
-        <Button
-          position={"absolute"}
-          // style={styles.button}
-          variant="outline"
-          // size="sm"
-          size={"13vw"}
-          height={"7vh"}
-          left={"13vw"}
-          borderRadius={"full"}
-          // width={"15vw"}
-          // height={"1vh"}
-          top={"77vh"}
-        >
-          <Link href="https://web.shadow.properties/" isExternal>
-            <Text
-              fontFamily={"HelveticaNeueLTStdBd"}
-              fontWeight={"medium"}
-              color={"#FFFFFF"}
-              textAlign={"center"}
-              fontSize={"2vh"}
-            >
-              Start Free Trial
-            </Text>
-          </Link>
-        </Button>
+          <Button
+            position={"absolute"}
+            // style={styles.button}
+            variant="outline"
+            // size="sm"
+            size={"13vw"}
+            height={"7vh"}
+            left={"13vw"}
+            borderRadius={"full"}
+            // width={"15vw"}
+            // height={"1vh"}
+            top={"77vh"}
+          >
+            <Link href="https://web.shadow.properties/" isExternal>
+              <Text
+                fontFamily={"HelveticaNeueLTStdBd"}
+                fontWeight={"medium"}
+                color={"#FFFFFF"}
+                textAlign={"center"}
+                fontSize={"2vh"}
+              >
+                Start Free Trial
+              </Text>
+            </Link>
+          </Button>
 
-        <Pressable top={"77vh"} left={"30vw"} position={"absolute"}>
-          <Link href="https://web.shadow.properties/" isExternal>
-            <AntDesign
-              position={"absolute"}
-              name="play"
-              size={"6vh"}
-              color="white"
-            />
-          </Link>
-        </Pressable>
-        <Text
-          fontFamily={"HelveticaNeueLTStdBd"}
-          fontWeight={"medium"}
-          top={"79vh"}
-          color={"#FFFFFF"}
-          left={"35vw"}
-          fontSize={"2vh"}
-          position={"absolute"}
-        >
-          Watch Video
-        </Text>
-      </View>
+          <Pressable top={"77vh"} left={"30vw"} position={"absolute"}>
+            <Link href="https://web.shadow.properties/" isExternal>
+              <AntDesign
+                position={"absolute"}
+                name="play"
+                size={"6vh"}
+                color="white"
+              />
+            </Link>
+          </Pressable>
+          <Text
+            fontFamily={"HelveticaNeueLTStdBd"}
+            fontWeight={"medium"}
+            top={"79vh"}
+            color={"#FFFFFF"}
+            left={"35vw"}
+            fontSize={"2vh"}
+            position={"absolute"}
+          >
+            Watch Video
+          </Text>
+        </View>
+      </Hidden>
     </>
   );
 };

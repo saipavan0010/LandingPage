@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   NativeBaseProvider,
   Image,
@@ -28,9 +28,11 @@ const { height, width } = Dimensions.get("window");
 
 const SixthWeb = ({ navigation }) => {
   const [index, setindex] = useState(1);
+
+  const toBottom = useRef()
   return (
     <>
-      <Box top={3920}>
+      <Box ref={toBottom} top={3920}>
         <Box safeAreaTop />
         <Center>
           <Image

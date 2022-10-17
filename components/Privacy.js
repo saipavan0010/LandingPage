@@ -15,7 +15,7 @@ import {
   Spacer,
   Box,
 } from "native-base";
-import { StyleSheet, ScrollView } from "react-native";
+import { StyleSheet } from "react-native";
 import { AntDesign, Feather } from "@expo/vector-icons";
 import { Menu } from "native-base";
 import * as Font from "expo-font";
@@ -30,7 +30,13 @@ const Privacy = ({ navigation }) => {
         <Stack zIndex={999}>
           <TopBar navigation={navigation} />
         </Stack>
-        <View alignSelf={"center"} width="80%">
+        <View
+          onLayout={(event) => {
+            console.log(event);
+          }}
+          alignSelf={"center"}
+          width="80%"
+        >
           <VStack top={vh(20)} space={4}>
             <Text style={Styles.title}>PRIVACY POLICY</Text>
             <Divider

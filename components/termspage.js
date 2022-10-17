@@ -21,8 +21,13 @@ const TnC = ({ navigation }) => {
         <Stack>
           <TopBar navigation={navigation} />
         </Stack>
-        <Center top={vh(35)}>
-          <Box width={"75%"}>
+        <Center top={vh(25)}>
+          <Box
+            onLayout={(event) => {
+              console.log(event);
+            }}
+            width={"75%"}
+          >
             <Center>
               <Heading style={Styles.title}>TERMS AND CONDITIONS</Heading>
               <Text style={Styles.heading}>1. Agreement to Terms</Text>
