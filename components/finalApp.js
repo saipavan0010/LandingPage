@@ -14,7 +14,7 @@ import {
 import { StyleSheet, ScrollView } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import * as Font from "expo-font";
-import Example from "./staticFirst";
+
 // import Test from "./test";
 import Tester from "./FirstWeb";
 import { Dimensions } from "react-native";
