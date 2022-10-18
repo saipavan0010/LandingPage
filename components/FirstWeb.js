@@ -263,6 +263,7 @@ const FirstWeb = (props) => {
             {`The Simple Way \n to Start Real Estate \n Investing`}
           </Text>
           <Text
+            cursor="pointer"
             fontFamily={"PoppinsMedium"}
             position={"absolute"}
             // style={styles.navText1}
@@ -276,6 +277,7 @@ const FirstWeb = (props) => {
           </Text>
           <Text
             fontFamily={"PoppinsMedium"}
+            cursor="pointer"
             position={"absolute"}
             // style={styles.navText2}
             left={"60vw"}
@@ -289,6 +291,7 @@ const FirstWeb = (props) => {
           <Text
             fontFamily={"PoppinsMedium"}
             position={"absolute"}
+            cursor="pointer"
             left={"67vw"}
             top={"8vh"}
             color={"#FFFFFF"}
@@ -302,6 +305,7 @@ const FirstWeb = (props) => {
             fontFamily={"PoppinsMedium"}
             position={"absolute"}
             left={"73vw"}
+            cursor="pointer"
             top={"8vh"}
             color={"#FFFFFF"}
             fontSize={"2vh"}
