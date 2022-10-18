@@ -60,7 +60,7 @@ const App = () => {
       >
         <Stack.Screen
           component={Final}
-          name="Final"
+          name="Shadow Properties"
           options={{ headerShown: false }}
         />
         <Stack.Screen

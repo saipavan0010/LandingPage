@@ -19,7 +19,7 @@ const Feelfree = ({ navigation }) => {
           Feel free to check our answers to{"\n"}
           <Pressable
             onPress={() => {
-              navigation.navigate("Faqs"), console.log("ghhgj");
+          navigation.navigate("ResponsiveFaqs"), console.log("ghhgj");
             }}
           >
             <Text color={"rgb(154,85,221)"}>Frequently Asked Questions</Text>

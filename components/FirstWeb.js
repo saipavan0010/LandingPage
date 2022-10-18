@@ -197,7 +197,7 @@ import * as Font from "expo-font";
 import { Dimensions } from "react-native";
 import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 
-const FirstWeb = () => {
+const FirstWeb = (props) => {
   const { height, width } = Dimensions.get("window");
 
   const gotoHowitwork = () =>

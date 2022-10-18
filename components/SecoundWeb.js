@@ -32,8 +32,6 @@ const SecoundWeb = () => {
             style={styles.backgroundImage}
             source={require("../assets/Background.png")}
             position="absolute"
-            // width={width}
-            // height={height0}
           />
           <Box
             position="absolute"
