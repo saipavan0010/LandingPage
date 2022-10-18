@@ -29,7 +29,7 @@ const { height, width } = Dimensions.get("window");
 const SixthWeb = ({ navigation }) => {
   const [index, setindex] = useState(1);
 
-  const toBottom = useRef()
+  const toBottom = useRef();
   return (
     <>
       <Box ref={toBottom} top={3920}>
@@ -69,7 +69,7 @@ const SixthWeb = ({ navigation }) => {
                     <Feelfree navigation={navigation} />
                     <Divider mt={8} width={width * 0.9} />
                     <Box m={5}>
-                      <Terms />
+                      <Terms navigation={navigation} />
                     </Box>
                     <Box mb={5}>
                       <Copyrights />

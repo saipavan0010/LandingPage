@@ -26,7 +26,7 @@ const FirstMobile = () => {
   const { height, width } = Dimensions.get("window");
   const gotoHowitwork = () =>
     window.scrollTo({
-      top: 800,
+      top: 730,
       behavior: "smooth",
     });
 

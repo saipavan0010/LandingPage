@@ -54,7 +54,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Final"
+        initialRouteName="Privacy"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen

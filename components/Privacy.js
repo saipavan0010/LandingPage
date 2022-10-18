@@ -37,7 +37,7 @@ const Privacy = ({ navigation }) => {
           alignSelf={"center"}
           width="80%"
         >
-          <VStack top={vh(20)} space={4}>
+          <VStack top={vh(5)} space={4}>
             <Text style={Styles.title}>PRIVACY POLICY</Text>
             <Divider
               marginTop={vh(1)}
