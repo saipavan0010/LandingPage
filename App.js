@@ -35,6 +35,7 @@ import Forminput from "./components/inputForm";
 import SecoundWeb from "./components/SecoundWeb";
 import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 import TnC from "./components/termspage";
+import ResponsiveFaqs from "./components/ResponsiveFAQs";
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -54,7 +55,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Privacy"
+        initialRouteName="Final"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen
@@ -75,6 +76,11 @@ const App = () => {
         <Stack.Screen
           component={Faqs}
           name="Faqs"
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          component={ResponsiveFaqs}
+          name="ResponsiveFaqs"
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

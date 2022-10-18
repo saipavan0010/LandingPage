@@ -7,10 +7,11 @@ import {
   ScrollView,
   Hidden,
 } from "native-base";
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, Dimensions } from "react-native";
 
 import Faq from "react-faq-component";
 import * as Font from "expo-font";
+import TopBar from "./Topbar";
 import { vw, vh } from "react-native-expo-viewport-units";
 
 const data = {
@@ -56,38 +57,32 @@ const data = {
 
 const ResponsiveFaqs = () => {
   const [rows, setRowsOption] = useState(null);
-  // const [row, setRow] = useState(0);
-
-  useEffect(() => {
-    Font.loadAsync({
-      PoppinsMed: require("./assets/Fonts/Poppins-Medium.ttf"),
-      PoppinsReg: require("./assets/Fonts/Poppins-Regular.ttf"),
-      PoppinsSemiBold: require("./assets/Fonts/Poppins-SemiBold.ttf"),
-      HelveticaNeueLTStdRoman: require("./assets/Fonts/HelveticaNeueLTStd-Roman.otf"),
-      HelveticaNeueLTStdMd: require("./assets/Fonts/HelveticaNeueLTStd-Md.otf"),
-      HelveticaNeueLTStdBd: require("./assets/Fonts/HelveticaNeueLTStd-Bd.otf"),
-    });
-  }, []);
+  const { height, width } = Dimensions.get("window");
 
   return (
     <NativeBaseProvider>
       <Hidden from={"993"} to={"3840"}>
-        <Stack bg={"#ffffff"}>
-          <Box>
-            <Text style={styless.title}>FAQs</Text>
-            <Divider style={styless.titleDivider}></Divider>
-          </Box>
-          <Stack style={styless.faqStyleBody}>
-            <Box style={styless.faqStyleWrapper}>
-              <Faq
-                data={data}
-                styles={styles}
-                config={config}
-                getRowOptions={setRowsOption}
-              />
-            </Box>
+        <Stack bgColor={"white"}>
+          <Stack zIndex={999}>
+            <TopBar navigation={navigation} />
           </Stack>
-          <Box padding={vh(10)} />
+          <Stack bg={"#ffffff"}>
+            <Box>
+              <Text style={styless.title}>FAQs</Text>
+              <Divider style={styless.titleDivider}></Divider>
+            </Box>
+            <Stack style={styless.faqStyleBody}>
+              <Box style={styless.faqStyleWrapper}>
+                <Faq
+                  data={data}
+                  styles={styles}
+                  config={config}
+                  getRowOptions={setRowsOption}
+                />
+              </Box>
+            </Stack>
+            <Box padding={vh(10)} />
+          </Stack>
         </Stack>
       </Hidden>
     </NativeBaseProvider>

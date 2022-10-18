@@ -32,7 +32,7 @@ const FirstMobile = () => {
 
   const gotofeatures = () =>
     window.scrollTo({
-      top: 3000,
+      top: 2300,
       behavior: "smooth",
     });
 
