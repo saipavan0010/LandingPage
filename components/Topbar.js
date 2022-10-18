@@ -8,6 +8,7 @@ import {
   Menu,
 } from "native-base";
 import { Pressable, StyleSheet, Dimensions } from "react-native";
+import ScrollToTop from "react-scroll-to-top";
 
 import * as Font from "expo-font";
 import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
@@ -17,9 +18,10 @@ import Shadowlogo from "./shadow_logo";
 const TopBar = ({ navigation }) => {
   const { height, width } = Dimensions.get("window");
   const gotoHowitwork = () =>
-    navigation.navigate("Final", {
+    navigation.navigate("Shadow Properties", {
       data: window.scrollTo({
-        top: 730,
+        // top: 730,
+        top: document.documentElement.scrollHeight,
         behavior: "smooth",
 
         edit: true,
@@ -28,17 +30,18 @@ const TopBar = ({ navigation }) => {
     });
 
   const gotofeatures = () =>
-    navigation.navigate("Final", {
+    navigation.navigate("Shadow Properties", {
       data: window.scrollTo({
         top: vh(680),
         behavior: "smooth",
+        // block:"end",
 
         edit: true,
       }),
     });
 
   const gotoPricing = () =>
-    navigation.navigate("Final", {
+    navigation.navigate("Shadow Properties", {
       data: window.scrollTo({
         top: vh(680),
         behavior: "smooth",
@@ -59,7 +62,7 @@ const TopBar = ({ navigation }) => {
   return (
     <NativeBaseProvider>
       <Stack>
-        {width <= 800 ? (
+        {width < 800 ? (
           <>
             <HStack top={vh(3)} space={1}>
               <Stack style={styles.logoMobile}>
@@ -113,9 +116,10 @@ const TopBar = ({ navigation }) => {
               <Box>
                 <Pressable
                   onPress={() => {
-                    navigation.navigate("Final", {
+                    navigation.navigate("Shadow Properties", {
                       data: window.scrollTo({
-                        top: vh(100),
+                        // top: vh(100),
+                        top: document.documentElement.scrollHeight,
                         behavior: "smooth",
 
                         edit: true,
@@ -130,7 +134,7 @@ const TopBar = ({ navigation }) => {
                 <Pressable
                   onPress={() => {
                     console.log("navigated");
-                    navigation.navigate("Final", {
+                    navigation.navigate("Shadow Properties", {
                       data: window.scrollTo({
                         top: vh(430),
                         behavior: "smooth",
@@ -147,7 +151,7 @@ const TopBar = ({ navigation }) => {
               <Box>
                 <Pressable
                   onPress={() => {
-                    navigation.navigate("Final", {
+                    navigation.navigate("Shadow Properties", {
                       data: window.scrollTo({
                         top: vh(680),
                         behavior: "smooth",
@@ -163,7 +167,7 @@ const TopBar = ({ navigation }) => {
               <Box>
                 <Pressable
                   onPress={() => {
-                    navigation.navigate("Final", {
+                    navigation.navigate("Shadow Properties", {
                       data: window.scrollTo({
                         top: vh(1000),
                         behavior: "smooth",

@@ -38,7 +38,7 @@ const SixthWeb = ({ navigation }) => {
           <Image
             resizeMethod="scale"
             source={require("../assets/get_started.png")}
-            height={height * 1.2}
+            height={height}
             width={width}
             position={"absolute"}
           />
