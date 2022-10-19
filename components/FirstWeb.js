@@ -197,15 +197,22 @@ import * as Font from "expo-font";
 import { Dimensions } from "react-native";
 import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 
-const FirstWeb = (props) => {
+// const FirstWeb = ({ firstweb }) => {
+
+const FirstWeb = React.forwardRef((props, ref) => {
   const { height, width } = Dimensions.get("window");
 
-  const gotoHowitwork = () =>
-    window.scrollTo({
-      top: vh(100),
-      behavior: "smooth",
-    });
+  const gotoHowitwork = () => {
+    // props.innerRef.current.scrollIntoView({
+    //   behavior: "smooth",
+    // });
+    // {
+    //   props.innerRef;
+    // }
+    ref.current.scrollIntoView({ behavior: "smooth" });
 
+    console.log(ref.current);
+  };
   const gotofeatures = () =>
     window.scrollTo({
       // top: 3200,
@@ -229,13 +236,14 @@ const FirstWeb = (props) => {
   return (
     <>
       <Hidden only={["base", "sm", "md"]}>
-        <View flex={1} zIndex="999">
+        <Box flex={1} zIndex="999">
           <Image
             source={require("../assets/hero_image_updated.png")}
             alt="Alternate Text"
             width={vw(100)}
             height={vh(100)}
           />
+
           <Image
             //   style={styles.logo}
             top={"3vh"}
@@ -262,6 +270,7 @@ const FirstWeb = (props) => {
           >
             {`The Simple Way \n to Start Real Estate \n Investing`}
           </Text>
+
           <Text
             cursor="pointer"
             fontFamily={"PoppinsMedium"}
@@ -271,7 +280,7 @@ const FirstWeb = (props) => {
             left={"50vw"}
             fontSize={"2vh"}
             color={"#FFFFFF"}
-            onClick={gotoHowitwork}
+            onPress={gotoHowitwork}
           >
             How it works
           </Text>
@@ -362,11 +371,11 @@ const FirstWeb = (props) => {
           >
             Watch Video
           </Text>
-        </View>
+        </Box>
       </Hidden>
     </>
   );
-};
+});
 
 export default FirstWeb;
 

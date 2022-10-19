@@ -63,7 +63,12 @@ const FAQs = ({ navigation }) => {
 
   return (
     <NativeBaseProvider>
-      <Stack bgColor={"white"}>
+      <Stack
+        bgColor={"white"}
+        onLayout={(event) => {
+          console.log(event);
+        }}
+      >
         <Stack>
           <TopBar navigation={navigation}></TopBar>
         </Stack>

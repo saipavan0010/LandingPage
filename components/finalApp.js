@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Text,
   NativeBaseProvider,
@@ -31,11 +31,20 @@ import FourthMobile from "./FourthMobile";
 import FifthMobile from "./FifthMobile";
 
 const Final = ({ navigation }) => {
+  const [change, setChange] = useState(false);
+  const firstweb = useRef();
+  useEffect(() => {
+    console.log(firstweb.current);
+    if (firstweb.current) {
+      console.log(firstweb.current.scrollIntoView(true));
+    }
+  }, [change]);
   return (
     <NativeBaseProvider>
       <VStack flex={1}>
-        <FirstWeb />
-        <SecoundWeb />
+        <FirstWeb  />
+
+        <SecoundWeb ref={firstweb} />
         <Third />
         <FourthWeb />
         <Plan />

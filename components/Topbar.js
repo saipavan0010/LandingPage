@@ -20,8 +20,8 @@ const TopBar = ({ navigation }) => {
   const gotoHowitwork = () =>
     navigation.navigate("Shadow Properties", {
       data: window.scrollTo({
-        // top: 730,
-        top: document.documentElement.scrollHeight,
+        top: 730,
+        // top: document.documentElement.scrollHeight,
         behavior: "smooth",
 
         edit: true,
