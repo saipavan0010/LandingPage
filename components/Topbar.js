@@ -118,7 +118,6 @@ const TopBar = ({ navigation }) => {
                   onPress={() => {
                     navigation.navigate("Shadow Properties", {
                       data: window.scrollTo({
-                        // top: vh(100),
                         top: document.documentElement.scrollHeight,
                         behavior: "smooth",
 

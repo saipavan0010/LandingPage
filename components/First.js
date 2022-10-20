@@ -196,10 +196,11 @@ import { AntDesign } from "@expo/vector-icons";
 import * as Font from "expo-font";
 import { Dimensions } from "react-native";
 import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
+import TopBar from "./Topbar";
 
 // const FirstWeb = ({ firstweb }) => {
 
-const FirstWeb = (props) => {
+const First = React.forwardRef((props, ref) => {
   const { height, width } = Dimensions.get("window");
 
   const gotoHowitwork = () => {
@@ -209,13 +210,14 @@ const FirstWeb = (props) => {
     // {
     //   props.innerRef;
     // }
-    console.log(props.screen2),
-      props.screen2.scrollIntoView({
-        behavior: "smooth",
-      });
+    ref.current.scrollIntoView({ behavior: "smooth" });
+
+    console.log(ref.current);
   };
   const gotofeatures = () =>
-    props.screen2.scrollIntoView({
+    window.scrollTo({
+      // top: 3200,
+      top: vh(430),
       behavior: "smooth",
     });
 
@@ -239,12 +241,11 @@ const FirstWeb = (props) => {
           <Image
             source={require("../assets/hero_image_updated.png")}
             alt="Alternate Text"
-            position={"absolute"}
             width={vw(100)}
             height={vh(100)}
           />
 
-          <Image
+          {/* <Image
             //   style={styles.logo}
             top={"3vh"}
             left={"13vw"}
@@ -322,7 +323,10 @@ const FirstWeb = (props) => {
             onClick={gotocontacts}
           >
             Contact
-          </Text>
+          </Text> */}
+          <Stack position={"absolute"}>
+            <TopBar />
+          </Stack>
 
           <Button
             position={"absolute"}
@@ -375,9 +379,9 @@ const FirstWeb = (props) => {
       </Hidden>
     </>
   );
-};
+});
 
-export default FirstWeb;
+export default First;
 
 const styles = StyleSheet.create({
   image: {

@@ -66,7 +66,7 @@ const FAQs = ({ navigation }) => {
       <Stack
         bgColor={"white"}
         onLayout={(event) => {
-          console.log(event);
+          console.log(event.nativeEvent.layout.height);
         }}
       >
         <Stack>

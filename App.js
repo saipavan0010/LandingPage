@@ -89,3 +89,31 @@ const App = () => {
 };
 
 export default App;
+
+// import { NavigationContainer } from "@react-navigation/native";
+// import { createStackNavigator } from "@react-navigation/stack";
+// import React from "react";
+// import Main from "./components/mainpage";
+// import NavigatedPage from "./components/navigated";
+
+// const Stack = createStackNavigator();
+
+// const App = () => {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="Main">
+//         <Stack.Screen
+//           name="Main"
+//           component={Main}
+//           options={{ headerShown: false }}
+//         />
+//         <Stack.Screen
+//           name="NavigatedPage"
+//           component={NavigatedPage}
+//           options={{ headerShown: false }}
+//         />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// };
+// export default App;

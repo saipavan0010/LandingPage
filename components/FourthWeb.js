@@ -26,14 +26,19 @@ const FourthWeb = () => {
           alignSelf={"center"}
           position={"absolute"}
           top={3100}
-          width={vw}
-          height={height}
+          width={"100%"}
+          // width={width}
+          // backgroundColor="black"
+          style={{ height: vh(258) }}
+          // height={"160%"}
+          // backgroundColor={"amber.400"}
         >
           <Image
             position={"absolute"}
             source={require("../assets/what_we_offer_bg.png")}
-            w="width"
-            h="100%"
+            w={width}
+            // h={height}
+            style={{ height: vh(258) }}
           />
           <Stack width={"100%"} height={"135%"}>
             <Text

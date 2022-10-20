@@ -29,22 +29,34 @@ import SecondMbl1 from "./SecondMobile";
 import ThirdFoldMBL from "./ThirdMobile";
 import FourthMobile from "./FourthMobile";
 import FifthMobile from "./FifthMobile";
-
+import FourthMobile1 from "./FourthFold";
+import Buttons from "./buttons";
+import Main from "./mainpage";
+import NavigatedPage from "./navigated";
 const Final = ({ navigation }) => {
   const [change, setChange] = useState(false);
-  const firstweb = useRef();
+  const screen2 = useRef();
+  const screen4 = useRef();
+  const screen5 = useRef();
+  const screen6 = useRef();
   useEffect(() => {
-    console.log(firstweb.current);
-    if (firstweb.current) {
-      console.log(firstweb.current.scrollIntoView(true));
-    }
+    // console.log(firstweb.current);
+    // if (firstweb.current) {
+    //   console.log(firstweb.current.scrollIntoView(true));
+    // }
   }, [change]);
   return (
     <NativeBaseProvider>
       <VStack flex={1}>
-        <FirstWeb  />
-
-        <SecoundWeb ref={firstweb} />
+        <FirstWeb
+          screen2={screen2}
+          screen4={screen4}
+          screen5={screen5}
+          screen6={screen6}
+        />
+        <Box ref={screen2}>
+          <SecoundWeb />
+        </Box>
         <Third />
         <FourthWeb />
         <Plan />
@@ -54,7 +66,8 @@ const Final = ({ navigation }) => {
         <FirstMobile />
         <SecondMbl1 />
         <ThirdFoldMBL />
-        <FourthMobile />
+        {/* <FourthMobile /> */}
+        <FourthMobile1 />
         <FifthMobile />
       </VStack>
     </NativeBaseProvider>

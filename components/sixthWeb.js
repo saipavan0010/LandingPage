@@ -13,6 +13,8 @@ import {
   ScrollView,
   Button,
   Pressable,
+  useBreakpointValue,
+  extendTheme,
 } from "native-base";
 import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 
@@ -25,14 +27,25 @@ import Feelfree from "./feelfree";
 import Terms from "./terms";
 import Getintouch from "./getintouch";
 const { height, width } = Dimensions.get("window");
+const theme = extendTheme({
+  breakpoints: {
+    "2xl": "1560",
+    xl: "1280",
+  },
+});
 
 const SixthWeb = ({ navigation }) => {
   const [index, setindex] = useState(1);
 
+  const Top = useBreakpointValue({
+    "2xl": 3790,
+    xl: 3800,
+  });
+
   const toBottom = useRef();
   return (
-    <>
-      <Box ref={toBottom} top={3920}>
+    <NativeBaseProvider theme={theme}>
+      <Box top={Top}>
         <Box safeAreaTop />
         <Center>
           <Image
@@ -126,7 +139,7 @@ const SixthWeb = ({ navigation }) => {
           {/* </Center> */}
         </Box>
       </Box>
-    </>
+    </NativeBaseProvider>
   );
 };
 export default SixthWeb;
