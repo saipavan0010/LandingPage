@@ -36,7 +36,7 @@ const theme = extendTheme({
 
 const SixthWeb = ({ navigation }) => {
   const Top = useBreakpointValue({
-    "2xl": 3790,
+    "2xl": 3900,
     xl: 3800,
   });
   const [index, setindex] = useState(1);
@@ -68,7 +68,7 @@ const SixthWeb = ({ navigation }) => {
             height={height}
             width={width}
           />
-          <Box position={"absolute"} width={width}>
+          <Box position={"absolute"} width={width * 0.98}>
             <Box mt={height * 0.2} />
             {width < 810 ? (
               <>

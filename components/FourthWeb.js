@@ -25,13 +25,9 @@ const FourthWeb = () => {
         <View
           alignSelf={"center"}
           position={"absolute"}
-          top={3100}
+          top={3000}
           width={"100%"}
-          // width={width}
-          // backgroundColor="black"
           style={{ height: vh(258) }}
-          // height={"160%"}
-          // backgroundColor={"amber.400"}
         >
           <Image
             position={"absolute"}
