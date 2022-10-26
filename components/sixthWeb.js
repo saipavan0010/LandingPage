@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   NativeBaseProvider,
   Image,
@@ -13,11 +13,7 @@ import {
   ScrollView,
   Button,
   Pressable,
-  useBreakpointValue,
-  extendTheme,
 } from "native-base";
-import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
-
 import { Dimensions, StyleSheet } from "react-native";
 import GetStarted from "./GetStartesCard";
 import Forminput from "./inputForm";
@@ -25,7 +21,9 @@ import Copyrights from "./copyrights";
 import Mailus from "./mail";
 import Feelfree from "./feelfree";
 import Terms from "./terms";
+import "./styles/style.css";
 import Getintouch from "./getintouch";
+import Mail from "./mailIcon";
 const { height, width } = Dimensions.get("window");
 const theme = extendTheme({
   breakpoints: {
@@ -35,14 +33,12 @@ const theme = extendTheme({
 });
 
 const SixthWeb = ({ navigation }) => {
-  const [index, setindex] = useState(1);
-
   const Top = useBreakpointValue({
     "2xl": 3790,
     xl: 3800,
   });
-
-  const toBottom = useRef();
+  const [index, setindex] = useState(1);
+  const [bgheight, setBgHeight] = useState(height);
   return (
     <NativeBaseProvider theme={theme}>
       <Box top={Top}>
@@ -51,11 +47,16 @@ const SixthWeb = ({ navigation }) => {
           <Image
             resizeMethod="scale"
             source={require("../assets/get_started.png")}
-            height={height}
+            height={bgheight * 2.5}
             width={width}
             position={"absolute"}
           />
-          <Box mt={height * 0.5}>
+          <Box
+            mt={height * 0.1}
+            onLayout={(e) => {
+              setBgHeight(e.nativeEvent.layout.height);
+            }}
+          >
             <GetStarted />
           </Box>
         </Center>
@@ -65,10 +66,9 @@ const SixthWeb = ({ navigation }) => {
             height={height}
             width={width}
           />
-          {/* <Center position={"absolute"}> */}
-          <Box position={"absolute"} width={width * 0.98}>
+          <Box position={"absolute"} width={width}>
             <Box mt={height * 0.2} />
-            {width < 800 ? (
+            {width < 810 ? (
               <>
                 <Box backgroundColor={"rgba(251,250,251,0.7)"}>
                   <Center>
@@ -118,7 +118,7 @@ const SixthWeb = ({ navigation }) => {
                           h={"2pt"}
                           backgroundColor={"rgb(218,212,229)"}
                           width={width * 0.72}
-                          left={1}
+                          left={5}
                           mb={10}
                         />
                       </Center>
@@ -136,7 +136,6 @@ const SixthWeb = ({ navigation }) => {
               </>
             )}
           </Box>
-          {/* </Center> */}
         </Box>
       </Box>
     </NativeBaseProvider>

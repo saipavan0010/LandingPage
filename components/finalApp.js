@@ -79,7 +79,7 @@ const Final = ({ navigation }) => {
           <ResponsiveThirdFold />
         </Box>
         <Mobilefourthfold />
-        <FifthMobile />
+        {/* <FifthMobile /> */}
       </VStack>
     </NativeBaseProvider>
   );

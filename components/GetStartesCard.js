@@ -42,7 +42,7 @@ const GetStarted = () => {
             <Box padding={width < 500 ? 10 : 20} pb={-10}>
               <Center>
                 <Text
-                  fontSize={width < 500 ? 30 : 60}
+                  fontSize={width < 500 ? width * 0.08 : height * 0.08}
                   color={"white"}
                   textAlign={"center"}
                 >
@@ -53,7 +53,7 @@ const GetStarted = () => {
                   fontSize={width < 500 ? 15 : 30}
                   textAlign={"center"}
                 >
-                  with a free 7-day trail
+                  with a free 7-day trial
                 </Text>
               </Center>
 
@@ -66,7 +66,7 @@ const GetStarted = () => {
                     >
                       <Icon
                         as={<Applestore />}
-                        size={width < 500 ? height * 0.15 : height * 0.2}
+                        size={width < 500 ? width * 0.3 : width * 0.1}
                       />
                     </Link>
                     <Link
@@ -76,7 +76,7 @@ const GetStarted = () => {
                       <Icon
                         as={<Googleplay />}
                         ml={width < 300 ? 4 : 10}
-                        size={width < 500 ? height * 0.15 : height * 0.2}
+                        size={width < 500 ? width * 0.3 : width * 0.1}
                       />
                     </Link>
                   </HStack>
