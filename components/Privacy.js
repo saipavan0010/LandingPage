@@ -32,7 +32,7 @@ const Privacy = ({ navigation }) => {
         </Stack>
         <View
           onLayout={(event) => {
-            console.log(event);
+            console.log(event, "privacy");
           }}
           alignSelf={"center"}
           width="80%"

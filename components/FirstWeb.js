@@ -176,7 +176,7 @@
 //   },
 // });
 
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import {
   Text,
   NativeBaseProvider,
@@ -200,6 +200,7 @@ import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 // const FirstWeb = ({ firstweb }) => {
 
 const FirstWeb = (props) => {
+  console.log(props, "jbhudffh");
   const { height, width } = Dimensions.get("window");
 
   const gotoHowitwork = () => {
@@ -209,10 +210,6 @@ const FirstWeb = (props) => {
     // {
     //   props.innerRef;
     // }
-    console.log(props.screen2),
-      props.screen2.scrollIntoView({
-        behavior: "smooth",
-      });
   };
   const gotofeatures = () =>
     props.screen2.scrollIntoView({

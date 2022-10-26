@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from "react";
-import {
-  NativeBaseProvider,
-  Box,
-  Divider,
-  Stack,
-  ScrollView,
-  Hidden,
-} from "native-base";
-import { StyleSheet, Text, Dimensions } from "react-native";
+import React, { useState } from "react";
+import { useMediaQuery, Box, Divider, Stack, Hidden, Text } from "native-base";
+import { StyleSheet } from "react-native";
 
 import Faq from "react-faq-component";
-import * as Font from "expo-font";
-import TopBar from "./Topbar";
-import { vw, vh } from "react-native-expo-viewport-units";
+import { vw, vh, vmax, vmin } from "react-native-expo-viewport-units";
 
 const data = {
   rows: [
@@ -56,48 +47,141 @@ const data = {
 };
 
 const ResponsiveFaqs = () => {
+  const [isSmaller] = useMediaQuery({
+    maxHeight: 512,
+  });
+
+  const [isLandScape, isPortrait] = useMediaQuery([
+    {
+      orientation: "landscape",
+    },
+    {
+      orientation: "portrait",
+    },
+  ]);
+
   const [rows, setRowsOption] = useState(null);
-  const { height, width } = Dimensions.get("window");
+  // const [row, setRow] = useState(0);
 
   return (
-    <NativeBaseProvider>
-      <Hidden from={"993"} to={"3840"}>
-        <Stack bgColor={"white"}>
-          <Stack zIndex={999}>
-            <TopBar navigation={navigation} />
-          </Stack>
-          <Stack bg={"#ffffff"}>
-            <Box>
-              <Text style={styless.title}>FAQs</Text>
-              <Divider style={styless.titleDivider}></Divider>
+    <>
+      <Hidden from={"999"} to={"3840"}>
+        <Stack bg={"#ffffff"} safeAreaTop>
+          <Box>
+            {isSmaller ? (
+              <>
+                {isLandScape ? (
+                  <>
+                    {/* MOBILE-LANDSCAPE (horizantal view):- */}
+                    <Text
+                      fontSize={vw(5)}
+                      marginTop={vh(6)}
+                      color="#5011a2"
+                      alignSelf="center"
+                      fontFamily="HelveticaNeueLTStdRoman"
+                    >
+                      FAQs
+                    </Text>
+                  </>
+                ) : (
+                  <>{/* MOBILE-PORTRAIT (vertical view):- */}</>
+                )}
+              </>
+            ) : (
+              <>
+                {isPortrait ? (
+                  <>
+                    {/* MOBILE-TAB-PORTRAIT (vertical view):- */}
+                    <Text
+                      fontSize={vw(8)}
+                      marginTop={vh(4)}
+                      color="#5011a2"
+                      alignSelf="center"
+                      fontFamily="HelveticaNeueLTStdRoman"
+                    >
+                      FAQs
+                    </Text>
+                  </>
+                ) : (
+                  <>
+                    {/* TAB-LANDSCAPE (horizantal view):- */}
+                    <Text
+                      fontSize={vw(5)}
+                      marginTop={vh(4)}
+                      color="#5011a2"
+                      alignSelf="center"
+                      fontFamily="HelveticaNeueLTStdRoman"
+                    >
+                      FAQs
+                    </Text>
+                  </>
+                )}
+              </>
+            )}
+
+            {isSmaller ? (
+              <>
+                {isLandScape ? (
+                  <>
+                    {/* MOBILE-LANDSCAPE (horizantal view):- */}
+                    <Divider
+                      marginTop={vh(1)}
+                      width={vw(7)}
+                      alignSelf="center"
+                      backgroundColor="#e62e00"
+                    />
+                  </>
+                ) : (
+                  <>{/* MOBILE-PORTRAIT (vertical view):- */}</>
+                )}
+              </>
+            ) : (
+              <>
+                {isPortrait ? (
+                  <>
+                    {/* MOBILE-TAB-PORTRAIT (vertical view):- */}
+                    <Divider style={styless.titleDivider} />
+                  </>
+                ) : (
+                  <>
+                    {/* TAB-LANDSCAPE (horizantal view):- */}
+                    <Divider
+                      marginTop={vh(1)}
+                      width={vw(7)}
+                      alignSelf="center"
+                      backgroundColor="#e62e00"
+                    />
+                  </>
+                )}
+              </>
+            )}
+          </Box>
+          <Stack style={styless.faqStyleBody}>
+            <Box style={styless.faqStyleWrapper}>
+              <Faq
+                data={data}
+                styles={styles}
+                config={config}
+                getRowOptions={setRowsOption}
+              />
             </Box>
-            <Stack style={styless.faqStyleBody}>
-              <Box style={styless.faqStyleWrapper}>
-                <Faq
-                  data={data}
-                  styles={styles}
-                  config={config}
-                  getRowOptions={setRowsOption}
-                />
-              </Box>
-            </Stack>
-            <Box padding={vh(10)} />
           </Stack>
+          <Box padding={vh(10)} />
         </Stack>
       </Hidden>
-    </NativeBaseProvider>
+    </>
   );
 };
 export default ResponsiveFaqs;
 
 const styless = StyleSheet.create({
-  title: {
-    fontSize: vw(8),
-    marginTop: vh(4),
-    color: "#5011a2",
-    alignSelf: "center",
-    fontFamily: "HelveticaNeueLTStdRoman",
-  },
+  // title: {
+  //   fontSize: vw(8),
+  //   marginTop: vh(4),
+  //   color: "#5011a2",
+  //   alignSelf: "center",
+  //   fontFamily: "HelveticaNeueLTStdRoman",
+  // },
   titleDivider: {
     marginTop: vh(1),
     width: vw(12),
@@ -118,10 +202,10 @@ const styles = {
   rowTitleColor: "#7D2BE9",
   rowContentColor: "#808080",
   arrowColor: "#7D2BE9",
-  rowTitleTextSize: "15px",
-  rowContentTextSize: "12px",
-  rowContentPaddingBottom: "5px",
-  rowContentPaddingRight: "16px",
+  rowTitleTextSize: "0.938rem",
+  rowContentTextSize: "0.75rem",
+  rowContentPaddingBottom: "0.313rem",
+  rowContentPaddingRight: "1rem",
   timingFunc: "ease",
   // transitionDuration: "1s",
 };
@@ -129,7 +213,6 @@ const styles = {
 const config = {
   animate: true,
   tabFocus: true,
-  // arrowIcon: "V",
   // openOnload: 0,
   // expandIcon: "+",
   // collapseIcon: "-",

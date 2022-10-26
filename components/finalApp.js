@@ -19,7 +19,6 @@ import { Dimensions } from "react-native";
 import Privacy from "./Privacy";
 import SixthWeb from "./sixthWeb";
 import Third from "./ThirdWeb";
-import FourthWeb from "./FourthWeb";
 import FirstWeb from "./FirstWeb";
 import Plan from "./Plan";
 import "./styles/style.css";
@@ -27,24 +26,24 @@ import SecoundWeb from "./SecoundWeb";
 import FirstMobile from "./firstscreen";
 import SecondMbl1 from "./SecondMobile";
 import ThirdFoldMBL from "./ThirdMobile";
-import FourthMobile from "./FourthMobile";
 import FifthMobile from "./FifthMobile";
-import FourthMobile1 from "./FourthFold";
-import Buttons from "./buttons";
-import Main from "./mainpage";
-import NavigatedPage from "./navigated";
+import WebThird from "./WebThirdFold";
+import ResponsiveThirdFold from "./ResponsiveThirdFold";
+import Mobilefourthfold from "./Mobilefourthfold";
+import FourthWeb from "../components/FourthWeb";
+
 const Final = ({ navigation }) => {
   const [change, setChange] = useState(false);
   const screen2 = useRef();
   const screen4 = useRef();
   const screen5 = useRef();
   const screen6 = useRef();
-  useEffect(() => {
-//     console.log(firstweb.current);
-//     if (firstweb.current) {
-//       console.log(firstweb.current.scrollIntoView(true));
-//     }
-  }, [change]);
+  // useEffect(() => {
+  //   console.log(firstweb.current);
+  //   if (firstweb.current) {
+  //     console.log(firstweb.current.scrollIntoView(true));
+  //   }
+  // }, [change]);
   return (
     <NativeBaseProvider>
       <VStack flex={1}>
@@ -54,20 +53,32 @@ const Final = ({ navigation }) => {
           screen5={screen5}
           screen6={screen6}
         />
-        <Box ref={screen2}>
+        <Box
+          ref={screen2}
+          onLayout={(e) => {
+            console.log(e.nativeEvent.layout);
+          }}
+        >
           <SecoundWeb />
         </Box>
-        <Third />
-//         <FourthWeb />
+        <Box
+          onLayout={(e) => {
+            console.log(e.nativeEvent.layout);
+          }}
+        >
+          <WebThird />
+        </Box>
+        <FourthWeb />
         <Plan />
         <SixthWeb navigation={navigation} />
       </VStack>
       <VStack>
         <FirstMobile />
         <SecondMbl1 />
-        <ThirdFoldMBL />
-        {/* <FourthMobile /> */}
-        <FourthMobile1 />
+        <Box>
+          <ResponsiveThirdFold />
+        </Box>
+        <Mobilefourthfold />
         <FifthMobile />
       </VStack>
     </NativeBaseProvider>

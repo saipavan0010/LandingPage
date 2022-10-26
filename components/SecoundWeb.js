@@ -1,4 +1,4 @@
-import React, { useEffect, forwardRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   NativeBaseProvider,
   View,
@@ -21,13 +21,21 @@ import { AntDesign, Ionicons } from "@expo/vector-icons";
 import DropShadow from "react-native-drop-shadow";
 import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 
-const SecoundWeb = React.forwardRef((props, ref) => {
+// const SecoundWeb = React.forwardRef((props, ref) => {
+const SecoundWeb = () => {
+  const howRef = useRef(null);
   const { height, width } = Dimensions.get("window");
+  const scroll = () => {
+    howRef.current.scrollIntoView();
+  };
+  useEffect(() => {
+    scroll;
+  }, []);
 
   return (
     <>
       <Hidden only={["base", "sm", "md"]}>
-        <Box ref={ref}>
+        <Box ref={howRef}>
           <Image
             style={styles.backgroundImage}
             source={require("../assets/Background.png")}
@@ -819,7 +827,7 @@ const SecoundWeb = React.forwardRef((props, ref) => {
       </Hidden>
     </>
   );
-});
+};
 
 export default SecoundWeb;
 

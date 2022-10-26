@@ -20,8 +20,9 @@ const TopBar = ({ navigation }) => {
   const gotoHowitwork = () =>
     navigation.navigate("Shadow Properties", {
       data: window.scrollTo({
-        top: 730,
+        // top: 730,
         // top: document.documentElement.scrollHeight,
+        y: 30,
         behavior: "smooth",
 
         edit: true,
@@ -32,7 +33,8 @@ const TopBar = ({ navigation }) => {
   const gotofeatures = () =>
     navigation.navigate("Shadow Properties", {
       data: window.scrollTo({
-        top: vh(680),
+        // top: vh(680),
+        y: 830,
         behavior: "smooth",
         // block:"end",
 
@@ -116,6 +118,10 @@ const TopBar = ({ navigation }) => {
               <Box>
                 <Pressable
                   onPress={() => {
+                    console.log(
+                      document.documentElement.scrollHeight,
+                      "how it works"
+                    );
                     navigation.navigate("Shadow Properties", {
                       data: window.scrollTo({
                         top: document.documentElement.scrollHeight,

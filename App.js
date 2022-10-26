@@ -33,9 +33,9 @@ import Tej2 from "./components/info";
 import Faqs from "./components/Faq";
 import Forminput from "./components/inputForm";
 import SecoundWeb from "./components/SecoundWeb";
-import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
 import TnC from "./components/termspage";
 import ResponsiveFaqs from "./components/ResponsiveFAQs";
+import WebFaqs from "./components/WebFAQs";
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -74,8 +74,8 @@ const App = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          component={Faqs}
-          name="Faqs"
+          component={WebFaqs}
+          name="WebFaqs"
           options={{ headerShown: false }}
         />
         <Stack.Screen

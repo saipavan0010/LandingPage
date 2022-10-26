@@ -55,7 +55,7 @@ const SixthWeb = ({ navigation }) => {
             width={width}
             position={"absolute"}
           />
-          <Box mt={height * 0.1}>
+          <Box mt={height * 0.5}>
             <GetStarted />
           </Box>
         </Center>

@@ -159,7 +159,7 @@ const Terms = ({ navigation }) => {
               </Stack>
               <Pressable
                 onPress={() => {
-                  navigation.navigate("Faqs", {
+                  navigation.navigate("WebFaqs", {
                     data: window.scrollTo({
                       top: 1,
                       behavior: "smooth",
