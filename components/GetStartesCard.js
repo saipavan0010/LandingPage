@@ -50,7 +50,7 @@ const GetStarted = () => {
                 </Text>
                 <Text
                   color={"#FFC537"}
-                  fontSize={width < 500 ? 15 : 30}
+                  fontSize={width < 500 ? width * 0.05 : height * 0.05}
                   textAlign={"center"}
                 >
                   with a free 7-day trial

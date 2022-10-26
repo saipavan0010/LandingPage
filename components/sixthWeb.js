@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   NativeBaseProvider,
   Image,
@@ -10,8 +10,8 @@ import {
   HStack,
   Icon,
   Link,
-  ScrollView,
   extendTheme,
+  ScrollView,
   useBreakpointValue,
   Button,
   Pressable,
@@ -27,6 +27,7 @@ import "./styles/style.css";
 import Getintouch from "./getintouch";
 import Mail from "./mailIcon";
 const { height, width } = Dimensions.get("window");
+
 const theme = extendTheme({
   breakpoints: {
     "2xl": "1560",
@@ -36,9 +37,17 @@ const theme = extendTheme({
 
 const SixthWeb = ({ navigation }) => {
   const Top = useBreakpointValue({
-    "2xl": 3900,
+    "2xl": 4100,
     xl: 3800,
   });
+
+  const [resized, setResized] = useState(false);
+
+  useEffect(() => {
+    visualViewport.addEventListener("resize", () => {
+      setResized(true);
+    });
+  }, [resized]);
   const [index, setindex] = useState(1);
   const [bgheight, setBgHeight] = useState(height);
   return (
@@ -68,7 +77,7 @@ const SixthWeb = ({ navigation }) => {
             height={height}
             width={width}
           />
-          <Box position={"absolute"} width={width*0.98}>
+          <Box position={"absolute"} width={width * 0.98}>
             <Box mt={height * 0.2} />
             {width < 810 ? (
               <>

@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Box, Text, Divider, Stack, ScrollView, Hidden } from "native-base";
+import {
+  Box,
+  Text,
+  Divider,
+  Stack,
+  ScrollView,
+  Hidden,
+  NativeBaseProvider,
+} from "native-base";
 import { StyleSheet } from "react-native";
 
 import Faq from "react-faq-component";
@@ -53,7 +61,7 @@ const WebFaqs = ({ navigation }) => {
   // const [row, setRow] = useState(0);
 
   return (
-    <>
+    <NativeBaseProvider>
       <Hidden only={["base", "sm", "md", "lg"]}>
         <Stack
           bg={"#ffffff"}
@@ -89,7 +97,7 @@ const WebFaqs = ({ navigation }) => {
           {/* </ScrollView> */}
         </Stack>
       </Hidden>
-    </>
+    </NativeBaseProvider>
   );
 };
 export default WebFaqs;

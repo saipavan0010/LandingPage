@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { useMediaQuery, Box, Divider, Stack, Hidden, Text } from "native-base";
+import {
+  useMediaQuery,
+  Box,
+  Divider,
+  Stack,
+  Hidden,
+  Text,
+  NativeBaseProvider,
+} from "native-base";
 import { StyleSheet } from "react-native";
 
 import Faq from "react-faq-component";
@@ -64,112 +72,112 @@ const ResponsiveFaqs = () => {
   // const [row, setRow] = useState(0);
 
   return (
-    <>
-      <Hidden from={"999"} to={"3840"}>
-        <Stack bg={"#ffffff"} safeAreaTop>
-          <Box>
-            {isSmaller ? (
-              <>
-                {isLandScape ? (
-                  <>
-                    {/* MOBILE-LANDSCAPE (horizantal view):- */}
-                    <Text
-                      fontSize={vw(5)}
-                      marginTop={vh(6)}
-                      color="#5011a2"
-                      alignSelf="center"
-                      fontFamily="HelveticaNeueLTStdRoman"
-                    >
-                      FAQs
-                    </Text>
-                  </>
-                ) : (
-                  <>{/* MOBILE-PORTRAIT (vertical view):- */}</>
-                )}
-              </>
-            ) : (
-              <>
-                {isPortrait ? (
-                  <>
-                    {/* MOBILE-TAB-PORTRAIT (vertical view):- */}
-                    <Text
-                      fontSize={vw(8)}
-                      marginTop={vh(4)}
-                      color="#5011a2"
-                      alignSelf="center"
-                      fontFamily="HelveticaNeueLTStdRoman"
-                    >
-                      FAQs
-                    </Text>
-                  </>
-                ) : (
-                  <>
-                    {/* TAB-LANDSCAPE (horizantal view):- */}
-                    <Text
-                      fontSize={vw(5)}
-                      marginTop={vh(4)}
-                      color="#5011a2"
-                      alignSelf="center"
-                      fontFamily="HelveticaNeueLTStdRoman"
-                    >
-                      FAQs
-                    </Text>
-                  </>
-                )}
-              </>
-            )}
+    <NativeBaseProvider>
+      {/* <Hidden from={"999"} to={"3840"}> */}
+      <Stack bg={"#ffffff"} safeAreaTop>
+        <Box>
+          {isSmaller ? (
+            <>
+              {isLandScape ? (
+                <>
+                  {/* MOBILE-LANDSCAPE (horizantal view):- */}
+                  <Text
+                    fontSize={vw(5)}
+                    marginTop={vh(6)}
+                    color="#5011a2"
+                    alignSelf="center"
+                    fontFamily="HelveticaNeueLTStdRoman"
+                  >
+                    FAQs
+                  </Text>
+                </>
+              ) : (
+                <>{/* MOBILE-PORTRAIT (vertical view):- */}</>
+              )}
+            </>
+          ) : (
+            <>
+              {isPortrait ? (
+                <>
+                  {/* MOBILE-TAB-PORTRAIT (vertical view):- */}
+                  <Text
+                    fontSize={vw(8)}
+                    marginTop={vh(4)}
+                    color="#5011a2"
+                    alignSelf="center"
+                    fontFamily="HelveticaNeueLTStdRoman"
+                  >
+                    FAQs
+                  </Text>
+                </>
+              ) : (
+                <>
+                  {/* TAB-LANDSCAPE (horizantal view):- */}
+                  <Text
+                    fontSize={vw(5)}
+                    marginTop={vh(4)}
+                    color="#5011a2"
+                    alignSelf="center"
+                    fontFamily="HelveticaNeueLTStdRoman"
+                  >
+                    FAQs
+                  </Text>
+                </>
+              )}
+            </>
+          )}
 
-            {isSmaller ? (
-              <>
-                {isLandScape ? (
-                  <>
-                    {/* MOBILE-LANDSCAPE (horizantal view):- */}
-                    <Divider
-                      marginTop={vh(1)}
-                      width={vw(7)}
-                      alignSelf="center"
-                      backgroundColor="#e62e00"
-                    />
-                  </>
-                ) : (
-                  <>{/* MOBILE-PORTRAIT (vertical view):- */}</>
-                )}
-              </>
-            ) : (
-              <>
-                {isPortrait ? (
-                  <>
-                    {/* MOBILE-TAB-PORTRAIT (vertical view):- */}
-                    <Divider style={styless.titleDivider} />
-                  </>
-                ) : (
-                  <>
-                    {/* TAB-LANDSCAPE (horizantal view):- */}
-                    <Divider
-                      marginTop={vh(1)}
-                      width={vw(7)}
-                      alignSelf="center"
-                      backgroundColor="#e62e00"
-                    />
-                  </>
-                )}
-              </>
-            )}
+          {isSmaller ? (
+            <>
+              {isLandScape ? (
+                <>
+                  {/* MOBILE-LANDSCAPE (horizantal view):- */}
+                  <Divider
+                    marginTop={vh(1)}
+                    width={vw(7)}
+                    alignSelf="center"
+                    backgroundColor="#e62e00"
+                  />
+                </>
+              ) : (
+                <>{/* MOBILE-PORTRAIT (vertical view):- */}</>
+              )}
+            </>
+          ) : (
+            <>
+              {isPortrait ? (
+                <>
+                  {/* MOBILE-TAB-PORTRAIT (vertical view):- */}
+                  <Divider style={styless.titleDivider} />
+                </>
+              ) : (
+                <>
+                  {/* TAB-LANDSCAPE (horizantal view):- */}
+                  <Divider
+                    marginTop={vh(1)}
+                    width={vw(7)}
+                    alignSelf="center"
+                    backgroundColor="#e62e00"
+                  />
+                </>
+              )}
+            </>
+          )}
+        </Box>
+        <Stack style={styless.faqStyleBody}>
+          <Box style={styless.faqStyleWrapper}>
+            <Faq
+              data={data}
+              styles={styles}
+              config={config}
+              getRowOptions={setRowsOption}
+            />
           </Box>
-          <Stack style={styless.faqStyleBody}>
-            <Box style={styless.faqStyleWrapper}>
-              <Faq
-                data={data}
-                styles={styles}
-                config={config}
-                getRowOptions={setRowsOption}
-              />
-            </Box>
-          </Stack>
-          <Box padding={vh(10)} />
         </Stack>
-      </Hidden>
-    </>
+        <Box padding={vh(10)} />
+      </Stack>
+      {/* </Hidden> */}
+    </NativeBaseProvider>
   );
 };
 export default ResponsiveFaqs;

@@ -25,7 +25,7 @@ const FourthWeb = () => {
         <View
           alignSelf={"center"}
           position={"absolute"}
-          top={3000}
+          top={2835}
           width={"100%"}
           style={{ height: vh(258) }}
         >
@@ -34,7 +34,7 @@ const FourthWeb = () => {
             source={require("../assets/what_we_offer_bg.png")}
             w={width}
             // h={height}
-            style={{ height: vh(258) }}
+            style={{ height: vh(283) }}
           />
           <Stack width={"100%"} height={"135%"}>
             <Text
