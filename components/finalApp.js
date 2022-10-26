@@ -40,10 +40,10 @@ const Final = ({ navigation }) => {
   const screen5 = useRef();
   const screen6 = useRef();
   useEffect(() => {
-    // console.log(firstweb.current);
-    // if (firstweb.current) {
-    //   console.log(firstweb.current.scrollIntoView(true));
-    // }
+//     console.log(firstweb.current);
+//     if (firstweb.current) {
+//       console.log(firstweb.current.scrollIntoView(true));
+//     }
   }, [change]);
   return (
     <NativeBaseProvider>
@@ -58,7 +58,7 @@ const Final = ({ navigation }) => {
           <SecoundWeb />
         </Box>
         <Third />
-        <FourthWeb />
+//         <FourthWeb />
         <Plan />
         <SixthWeb navigation={navigation} />
       </VStack>
