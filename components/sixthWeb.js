@@ -11,6 +11,8 @@ import {
   Icon,
   Link,
   ScrollView,
+  extendTheme,
+  useBreakpointValue,
   Button,
   Pressable,
 } from "native-base";
