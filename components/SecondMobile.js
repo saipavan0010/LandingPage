@@ -401,7 +401,7 @@ export default SecondMbl1;
 const styles = StyleSheet.create({
   backgroundImage: {
     width: vw(100),
-    height: vh(145),
+    height: vh(110),
   },
   heading: {
     alignItems: "center",
@@ -472,26 +472,47 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignSelf: "center",
   },
+  // pagtext: {
+  //   borderRadius: 13 / 2,
+  //   borderWidth: 2,
+  //   width: 12,
+  //   height: 12,
+  //   alignSelf: "center",
+  //   alignItems: "center",
+  //   borderColor: "#7D2BE9",
+  //   opacity: "100%",
+  //   // marginHorizontal: vw(5),
+  //   marginTop: platform === "android" ? "-10px" : "-1px",
+
+  //   color: "#7D2BE9",
+  // },
+  // pagdottext: {
+  //   fontSize: 46,
+  //   color: "#7D2BE9",
+  //   // position: "absolute",
+  //   opacity: "30%",
+  //   borderWidth: "full",
+  //   marginHorizontal: vw(-2),
+  // },
+
   pagtext: {
-    borderRadius: 13 / 2,
-    borderWidth: 2,
-    width: 12,
-    height: 12,
-    alignSelf: "center",
-    alignItems: "center",
+    borderRadius: vw(2),
+    borderWidth: vw(0.4),
+    // width: 12,
+    // height: 12,
+    width: vw(2),
+    height: vw(2),
     borderColor: "#7D2BE9",
     opacity: "100%",
-    // marginHorizontal: vw(5),
-    marginTop: platform === "android" ? "-10px" : "-1px",
-
+    marginHorizontal: vw(1.2), // this is for the space between circle and dots
+    marginTop: platform === "android" ? vh(-0.4) : vh(1.1),
     color: "#7D2BE9",
   },
   pagdottext: {
-    fontSize: 46,
+    fontSize: vw(8),
     color: "#7D2BE9",
-    // position: "absolute",
     opacity: "30%",
     borderWidth: "full",
-    marginHorizontal: vw(-2),
+    marginHorizontal: vw(-1.5), // this is for space between dots
   },
 });

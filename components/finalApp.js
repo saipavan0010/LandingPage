@@ -11,6 +11,7 @@ import {
   Stack,
   View,
 } from "native-base";
+const { width, height } = Dimensions.get("window");
 import { StyleSheet, ScrollView } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import * as Font from "expo-font";
@@ -46,7 +47,7 @@ const Final = ({ navigation }) => {
   // }, [change]);
   return (
     <NativeBaseProvider>
-      <VStack flex={1}>
+      <VStack>
         <FirstWeb
           screen2={screen2}
           screen4={screen4}
@@ -70,7 +71,6 @@ const Final = ({ navigation }) => {
         </Box>
         <FourthWeb />
         <Plan />
-        <SixthWeb navigation={navigation} />
       </VStack>
       <VStack>
         <FirstMobile />
@@ -78,9 +78,12 @@ const Final = ({ navigation }) => {
         <Box>
           <ResponsiveThirdFold />
         </Box>
-        <Mobilefourthfold />
+        <Box>
+          <Mobilefourthfold />
+        </Box>
         <FifthMobile />
       </VStack>
+      <SixthWeb navigation={navigation} />
     </NativeBaseProvider>
   );
 };

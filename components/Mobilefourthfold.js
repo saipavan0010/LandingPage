@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
   StyleSheet,
-  View,
+  View as Stack,
   Text,
   Image,
   Dimensions,
@@ -162,8 +162,8 @@ const Mobilefourthfold = () => {
   const renderItem = (data) => (
     <NativeBaseProvider>
       {isPortrait ? (
-        <View style={styles.cardContainer}>
-          <View style={styles.cardWrapper}>
+        <Stack style={styles.cardContainer}>
+          <Stack style={styles.cardWrapper}>
             <VStack marginTop={platform === "android" ? vh(6.6) : vh(7.3)}>
               {/* ROW-1 */}
               <Box alignItems={"center"}>
@@ -180,7 +180,7 @@ const Mobilefourthfold = () => {
                   borderColor="#FFFFFF"
                   bg="#F9F1FD"
                 >
-                  <View style={styles.headingviewww}>
+                  <Stack style={styles.headingviewww}>
                     <Heading
                       color="#6D549F"
                       fontSize={vw(4.5)}
@@ -190,7 +190,7 @@ const Mobilefourthfold = () => {
                       {data.heading1}
                     </Heading>
                     <Text style={styles.texttt}>{data.text1}</Text>
-                  </View>
+                  </Stack>
                 </Card>
 
                 {/* SMALL-CARD */}
@@ -211,7 +211,9 @@ const Mobilefourthfold = () => {
                   borderWidth="3"
                 >
                   {/* SMALL-CARD-IMAGE */}
-                  <View style={styles.imageview}>{image[data.svgindex1]}</View>
+                  <Stack style={styles.imageview}>
+                    {image[data.svgindex1]}
+                  </Stack>
                 </Card>
               </Box>
 
@@ -232,7 +234,7 @@ const Mobilefourthfold = () => {
                     borderColor="#FFFFFF"
                     bg="#F9F1FD"
                   >
-                    <View style={styles.headingviewww}>
+                    <Stack style={styles.headingviewww}>
                       <Heading
                         color="#6D549F"
                         fontSize={vw(4.5)}
@@ -242,7 +244,7 @@ const Mobilefourthfold = () => {
                         {data.heading2}
                       </Heading>
                       <Text style={styles.texttt}>{data.text2}</Text>
-                    </View>
+                    </Stack>
                   </Card>
 
                   {/* SMALL-CARD */}
@@ -263,9 +265,9 @@ const Mobilefourthfold = () => {
                     borderWidth="3"
                   >
                     {/* SMALL-CARD-IMAGE */}
-                    <View style={styles.imageview}>
+                    <Stack style={styles.imageview}>
                       {image[data.svgindex2]}
-                    </View>
+                    </Stack>
                   </Card>
                 </Box>
               ) : (
@@ -273,20 +275,20 @@ const Mobilefourthfold = () => {
               )}
             </VStack>
 
-            <View
+            <Stack
               style={[
                 styles.cornerLabel,
                 { backgroundColor: data.cornerLabelColor },
               ]}
             >
               <Text style={styles.cornerLabelText}>{data.cornerLabelText}</Text>
-            </View>
-          </View>
-        </View>
+            </Stack>
+          </Stack>
+        </Stack>
       ) : (
         // for landscape
-        <View style={styles.cardContainer}>
-          <View style={styles.cardWrapper}>
+        <Stack style={styles.cardContainer}>
+          <Stack style={styles.cardWrapper}>
             <HStack
               marginTop={platform === "android" ? vh(20) : vh(20)}
               alignSelf={"center"}
@@ -307,7 +309,7 @@ const Mobilefourthfold = () => {
                   borderColor="#FFFFFF"
                   bg="#F9F1FD"
                 >
-                  <View style={styles.headingview}>
+                  <Stack style={styles.headingview}>
                     <Heading
                       color="#6D549F"
                       fontSize={vw(3)}
@@ -317,7 +319,7 @@ const Mobilefourthfold = () => {
                       {data.heading1}
                     </Heading>
                     <Text style={styles.text}>{data.text1}</Text>
-                  </View>
+                  </Stack>
                 </Card>
 
                 {/* SMALL-CARD */}
@@ -338,7 +340,9 @@ const Mobilefourthfold = () => {
                   borderWidth="3"
                 >
                   {/* SMALL-CARD-IMAGE */}
-                  <View style={styles.imageview}>{image[data.svgindex1]}</View>
+                  <Stack style={styles.imageview}>
+                    {image[data.svgindex1]}
+                  </Stack>
                 </Card>
               </Box>
               {/* ROW-2 */}
@@ -357,7 +361,7 @@ const Mobilefourthfold = () => {
                     borderColor="#FFFFFF"
                     bg="#F9F1FD"
                   >
-                    <View style={styles.headingview}>
+                    <Stack style={styles.headingview}>
                       <Heading
                         color="#6D549F"
                         fontSize={vw(3)}
@@ -367,7 +371,7 @@ const Mobilefourthfold = () => {
                         {data.heading2}
                       </Heading>
                       <Text style={styles.text}>{data.text2}</Text>
-                    </View>
+                    </Stack>
                   </Card>
 
                   {/* SMALL-CARD */}
@@ -388,9 +392,9 @@ const Mobilefourthfold = () => {
                     borderWidth="3"
                   >
                     {/* SMALL-CARD-IMAGE */}
-                    <View style={styles.imageview}>
+                    <Stack style={styles.imageview}>
                       {image[data.svgindex2]}
-                    </View>
+                    </Stack>
                   </Card>
                 </Box>
               ) : (
@@ -398,16 +402,16 @@ const Mobilefourthfold = () => {
               )}
             </HStack>
 
-            <View
+            <Stack
               style={[
                 styles.cornerLabel,
                 { backgroundColor: data.cornerLabelColor },
               ]}
             >
               <Text style={styles.cornerLabelText}>{data.cornerLabelText}</Text>
-            </View>
-          </View>
-        </View>
+            </Stack>
+          </Stack>
+        </Stack>
       )}
     </NativeBaseProvider>
   );
@@ -420,7 +424,7 @@ const Mobilefourthfold = () => {
     <NativeBaseProvider>
       <Hidden from="999" to="3840">
         {isPortrait ? (
-          <View
+          <Stack
             Flex="1"
             display={["true", "true", "true", "none"]}
             zIndex="1200"
@@ -436,17 +440,17 @@ const Mobilefourthfold = () => {
               }}
               resizeMode="cover"
             />
-            <View style={styles.whatweofferview}>
+            <Stack style={styles.whatweofferview}>
               <Text style={styles.whatweoffertext}>What We Offer</Text>
-            </View>
+            </Stack>
 
             {/* carosel */}
-            <View style={styles.container}>
+            <Stack style={styles.container}>
               <Carousel
                 pagination={(p) => {
                   console.log(p);
                   return (
-                    <View>
+                    <Stack>
                       <HStack alignSelf="center" justifyContent="center">
                         {[...Array(p.total).keys()].map((x) =>
                           p.currentPage === x + 1 ? (
@@ -463,7 +467,7 @@ const Mobilefourthfold = () => {
                           )
                         )}
                       </HStack>
-                    </View>
+                    </Stack>
                   );
                 }}
                 renderItem={renderItem}
@@ -472,11 +476,11 @@ const Mobilefourthfold = () => {
                 // autoplay
                 autoplayInterval={2500}
               />
-            </View>
-          </View>
+            </Stack>
+          </Stack>
         ) : (
           // islandscape
-          <View
+          <Stack
             Flex="1"
             display={["true", "true", "true", "none"]}
             zIndex="1200"
@@ -492,17 +496,17 @@ const Mobilefourthfold = () => {
               }}
               resizeMode="cover"
             />
-            <View style={styles.whatweofferviewww}>
+            <Stack style={styles.whatweofferviewww}>
               <Text style={styles.whatweoffertexttt}>What We Offer</Text>
-            </View>
+            </Stack>
 
             {/* carosel */}
-            <View style={styles.container}>
+            <Stack style={styles.container}>
               <Carousel
                 pagination={(p) => {
                   console.log(p);
                   return (
-                    <View>
+                    <Stack>
                       <HStack alignSelf="center" justifyContent="center">
                         {[...Array(p.total).keys()].map((x) =>
                           p.currentPage === x + 1 ? (
@@ -519,7 +523,7 @@ const Mobilefourthfold = () => {
                           )
                         )}
                       </HStack>
-                    </View>
+                    </Stack>
                   );
                 }}
                 renderItem={renderItem}
@@ -528,8 +532,8 @@ const Mobilefourthfold = () => {
                 // autoplay
                 autoplayInterval={2500}
               />
-            </View>
-          </View>
+            </Stack>
+          </Stack>
         )}
       </Hidden>
     </NativeBaseProvider>
@@ -540,13 +544,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-    position: "absolute",
-  },
-  cardContainer: {
     width: vw(100),
-    // marginTop: vh(6.4),
+
+    justifyContent: "center",
+    // position: "absolute",
   },
+
   cardWrapper: {
     borderRadius: 8,
     overflow: "hidden",
@@ -610,7 +613,7 @@ const styles = StyleSheet.create({
     color: "#7D2BE9",
     alignSelf: "center",
     margin: "auto",
-    marginBottom: vh(25),
+    marginBottom: vh(5),
   },
   whatweofferview: {
     width: vw(70),

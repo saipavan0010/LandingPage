@@ -55,7 +55,7 @@ const FifthMobile = () => {
       <Hidden from="800" to="1024">
         <Image
           source={require("../assets/price_bg.png")}
-          height={height * 1.1}
+          height={height * 1.2}
         />
         <Box width={width} position={"absolute"}>
           <Center>
