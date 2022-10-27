@@ -37,7 +37,7 @@ const theme = extendTheme({
 
 const SixthWeb = ({ navigation }) => {
   const Top = useBreakpointValue({
-    "2xl": 4100,
+    "2xl": 3840,
     xl: 3800,
   });
 

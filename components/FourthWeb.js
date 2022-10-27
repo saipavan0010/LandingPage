@@ -25,7 +25,7 @@ const FourthWeb = () => {
         <View
           alignSelf={"center"}
           position={"absolute"}
-          top={2835}
+          top={3030}
           width={"100%"}
           style={{ height: vh(258) }}
         >

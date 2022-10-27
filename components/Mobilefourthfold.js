@@ -400,63 +400,15 @@ const Mobilefourthfold = () => {
             </>
           ) : (
             <>
+              {/* <Hidden from="999" to="3840"> */}
               {/* TAB-LANDSCAPE (horizantal view):- */}
               {/* <Hidden from="2924" to="3840"> */}
-              <Stack style={styles.cardContainer}>
-                <VStack>
-                  <HStack alignSelf={"center"} space={vw(2.5)}>
-                    {/* ROW-1 */}
-                    <Box>
-                      {/* BIG-CARD */}
-                      <Card
-                        style={{
-                          width: vw(45),
-                          height: vh(55),
-                        }}
-                        marginTop={vh(8)}
-                        shadow="-1"
-                        borderRadius={8}
-                        borderWidth="3"
-                        borderColor="#FFFFFF"
-                        bg="#F9F1FD"
-                      >
-                        <Stack style={styles.headingview}>
-                          <Heading
-                            color="#6D549F"
-                            fontSize={vw(3)}
-                            textAlign="center"
-                            fontFamily="HelveticaNeueLTStdBd"
-                          >
-                            {data.heading1}
-                          </Heading>
-                          <Text style={styles.texttab}>{data.text1}</Text>
-                        </Stack>
-                      </Card>
-
-                      {/* SMALL-CARD */}
-                      <Card
-                        alignSelf="center"
-                        justifyContent="center"
-                        bg={"#8339FF"}
-                        style={{
-                          width: vw(8),
-                          height: vw(8),
-                        }}
-                        position="absolute"
-                        shadow="-2"
-                        borderRadius={18}
-                        borderColor="#C099FE"
-                        borderWidth="3"
-                      >
-                        {/* SMALL-CARD-IMAGE */}
-                        <Stack style={styles.imageview}>
-                          {image[data.svgindex1]}
-                        </Stack>
-                      </Card>
-                    </Box>
-                    {/* ROW-2 */}
-                    {data.heading2 ? (
-                      <Box alignItems={"center"}>
+              <Hidden from="999" to="3840">
+                <Stack style={styles.cardContainer}>
+                  <VStack>
+                    <HStack alignSelf={"center"} space={vw(2.5)}>
+                      {/* ROW-1 */}
+                      <Box>
                         {/* BIG-CARD */}
                         <Card
                           style={{
@@ -477,65 +429,9 @@ const Mobilefourthfold = () => {
                               textAlign="center"
                               fontFamily="HelveticaNeueLTStdBd"
                             >
-                              {data.heading2}
+                              {data.heading1}
                             </Heading>
-                            <Text style={styles.texttab}>{data.text2}</Text>
-                          </Stack>
-                        </Card>
-
-                        {/* SMALL-CARD */}
-                        <Card
-                          position="absolute"
-                          alignSelf="center"
-                          justifyContent="center"
-                          bg={"#8339FF"}
-                          style={{
-                            width: vw(8),
-                            height: vw(8),
-                          }}
-                          shadow="-2"
-                          borderRadius={18}
-                          borderColor="#C099FE"
-                          borderWidth="3"
-                        >
-                          {/* SMALL-CARD-IMAGE */}
-                          <Stack style={styles.imageview}>
-                            {image[data.svgindex2]}
-                          </Stack>
-                        </Card>
-                      </Box>
-                    ) : (
-                      <></>
-                    )}
-                  </HStack>
-
-                  {data.heading2 ? (
-                    <HStack alignSelf={"center"} space={vw(2.5)}>
-                      {/* ROW-1 */}
-                      <Box>
-                        {/* BIG-CARD */}
-                        <Card
-                          style={{
-                            width: vw(45),
-                            height: vh(55),
-                          }}
-                          marginTop={vh(14)}
-                          shadow="-1"
-                          borderRadius={8}
-                          borderWidth="3"
-                          borderColor="#FFFFFF"
-                          bg="#F9F1FD"
-                        >
-                          <Stack style={styles.headingview}>
-                            <Heading
-                              color="#6D549F"
-                              fontSize={vw(3)}
-                              textAlign="center"
-                              fontFamily="HelveticaNeueLTStdBd"
-                            >
-                              {data.heading3}
-                            </Heading>
-                            <Text style={styles.texttab}>{data.text3}</Text>
+                            <Text style={styles.texttab}>{data.text1}</Text>
                           </Stack>
                         </Card>
 
@@ -548,7 +444,6 @@ const Mobilefourthfold = () => {
                             width: vw(8),
                             height: vw(8),
                           }}
-                          marginTop={vh(6)}
                           position="absolute"
                           shadow="-2"
                           borderRadius={18}
@@ -557,13 +452,69 @@ const Mobilefourthfold = () => {
                         >
                           {/* SMALL-CARD-IMAGE */}
                           <Stack style={styles.imageview}>
-                            {image[data.svgindex3]}
+                            {image[data.svgindex1]}
                           </Stack>
                         </Card>
                       </Box>
                       {/* ROW-2 */}
                       {data.heading2 ? (
                         <Box alignItems={"center"}>
+                          {/* BIG-CARD */}
+                          <Card
+                            style={{
+                              width: vw(45),
+                              height: vh(55),
+                            }}
+                            marginTop={vh(8)}
+                            shadow="-1"
+                            borderRadius={8}
+                            borderWidth="3"
+                            borderColor="#FFFFFF"
+                            bg="#F9F1FD"
+                          >
+                            <Stack style={styles.headingview}>
+                              <Heading
+                                color="#6D549F"
+                                fontSize={vw(3)}
+                                textAlign="center"
+                                fontFamily="HelveticaNeueLTStdBd"
+                              >
+                                {data.heading2}
+                              </Heading>
+                              <Text style={styles.texttab}>{data.text2}</Text>
+                            </Stack>
+                          </Card>
+
+                          {/* SMALL-CARD */}
+                          <Card
+                            position="absolute"
+                            alignSelf="center"
+                            justifyContent="center"
+                            bg={"#8339FF"}
+                            style={{
+                              width: vw(8),
+                              height: vw(8),
+                            }}
+                            shadow="-2"
+                            borderRadius={18}
+                            borderColor="#C099FE"
+                            borderWidth="3"
+                          >
+                            {/* SMALL-CARD-IMAGE */}
+                            <Stack style={styles.imageview}>
+                              {image[data.svgindex2]}
+                            </Stack>
+                          </Card>
+                        </Box>
+                      ) : (
+                        <></>
+                      )}
+                    </HStack>
+
+                    {data.heading2 ? (
+                      <HStack alignSelf={"center"} space={vw(2.5)}>
+                        {/* ROW-1 */}
+                        <Box>
                           {/* BIG-CARD */}
                           <Card
                             style={{
@@ -584,15 +535,14 @@ const Mobilefourthfold = () => {
                                 textAlign="center"
                                 fontFamily="HelveticaNeueLTStdBd"
                               >
-                                {data.heading4}
+                                {data.heading3}
                               </Heading>
-                              <Text style={styles.texttab}>{data.text4}</Text>
+                              <Text style={styles.texttab}>{data.text3}</Text>
                             </Stack>
                           </Card>
 
                           {/* SMALL-CARD */}
                           <Card
-                            position="absolute"
                             alignSelf="center"
                             justifyContent="center"
                             bg={"#8339FF"}
@@ -601,6 +551,7 @@ const Mobilefourthfold = () => {
                               height: vw(8),
                             }}
                             marginTop={vh(6)}
+                            position="absolute"
                             shadow="-2"
                             borderRadius={18}
                             borderColor="#C099FE"
@@ -608,31 +559,82 @@ const Mobilefourthfold = () => {
                           >
                             {/* SMALL-CARD-IMAGE */}
                             <Stack style={styles.imageview}>
-                              {image[data.svgindex4]}
+                              {image[data.svgindex3]}
                             </Stack>
                           </Card>
                         </Box>
-                      ) : (
-                        <></>
-                      )}
-                    </HStack>
-                  ) : (
-                    <></>
-                  )}
-                </VStack>
+                        {/* ROW-2 */}
+                        {data.heading2 ? (
+                          <Box alignItems={"center"}>
+                            {/* BIG-CARD */}
+                            <Card
+                              style={{
+                                width: vw(45),
+                                height: vh(55),
+                              }}
+                              marginTop={vh(14)}
+                              shadow="-1"
+                              borderRadius={8}
+                              borderWidth="3"
+                              borderColor="#FFFFFF"
+                              bg="#F9F1FD"
+                            >
+                              <Stack style={styles.headingview}>
+                                <Heading
+                                  color="#6D549F"
+                                  fontSize={vw(3)}
+                                  textAlign="center"
+                                  fontFamily="HelveticaNeueLTStdBd"
+                                >
+                                  {data.heading4}
+                                </Heading>
+                                <Text style={styles.texttab}>{data.text4}</Text>
+                              </Stack>
+                            </Card>
 
-                <Stack
-                  style={[
-                    styles.cornerLabel,
-                    { backgroundColor: data.cornerLabelColor },
-                  ]}
-                >
-                  <Text style={styles.cornerLabelText}>
-                    {data.cornerLabelText}
-                  </Text>
+                            {/* SMALL-CARD */}
+                            <Card
+                              position="absolute"
+                              alignSelf="center"
+                              justifyContent="center"
+                              bg={"#8339FF"}
+                              style={{
+                                width: vw(8),
+                                height: vw(8),
+                              }}
+                              marginTop={vh(6)}
+                              shadow="-2"
+                              borderRadius={18}
+                              borderColor="#C099FE"
+                              borderWidth="3"
+                            >
+                              {/* SMALL-CARD-IMAGE */}
+                              <Stack style={styles.imageview}>
+                                {image[data.svgindex4]}
+                              </Stack>
+                            </Card>
+                          </Box>
+                        ) : (
+                          <></>
+                        )}
+                      </HStack>
+                    ) : (
+                      <></>
+                    )}
+                  </VStack>
+
+                  <Stack
+                    style={[
+                      styles.cornerLabel,
+                      { backgroundColor: data.cornerLabelColor },
+                    ]}
+                  >
+                    <Text style={styles.cornerLabelText}>
+                      {data.cornerLabelText}
+                    </Text>
+                  </Stack>
                 </Stack>
-              </Stack>
-              {/* </Hidden> */}
+              </Hidden>
             </>
           )}
         </>
@@ -974,57 +976,64 @@ const Mobilefourthfold = () => {
             </>
           ) : (
             <>
-              <Box>
-                {/* TAB-LANDSCAPE (horizantal view):- */}
-                <Stack Flex="1" alignSelf={"center"}>
-                  <Image
-                    source={{
-                      uri: "https://cdn.shadow.properties/videos_spweb/what_we_offer_bg.png",
-                    }}
-                    style={{
-                      width: vw(100),
-                    }}
-                    resizeMode="cover"
-                  />
-                  <Stack style={styles.whatweofferviewww}>
-                    <Text style={styles.whatweoffertexttt}>What We Offer</Text>
-                  </Stack>
-
-                  {/* carosel */}
-                  <Stack style={styles.container}>
-                    <Carousel
-                      pagination={(p) => {
-                        console.log(p);
-                        return (
-                          <Stack>
-                            <HStack alignSelf="center" justifyContent="center">
-                              {[...Array(p.total).keys()].map((x) =>
-                                p.currentPage === x + 1 ? (
-                                  <Center>
-                                    <Text style={styles.pagtexttt}></Text>
-                                  </Center>
-                                ) : (
-                                  <Center>
-                                    <Text style={styles.pagdottexttt}>
-                                      {" "}
-                                      {"\u2022"}{" "}
-                                    </Text>
-                                  </Center>
-                                )
-                              )}
-                            </HStack>
-                          </Stack>
-                        );
+              <Hidden from="2924" to="3840">
+                <Box>
+                  {/* TAB-LANDSCAPE (horizantal view):- */}
+                  <Stack Flex="1" alignSelf={"center"}>
+                    <Image
+                      source={{
+                        uri: "https://cdn.shadow.properties/videos_spweb/what_we_offer_bg.png",
                       }}
-                      renderItem={renderItem}
-                      data={DATA1}
-                      loop
-                      autoplay
-                      autoplayInterval={2500}
+                      style={{
+                        width: vw(100),
+                      }}
+                      resizeMode="cover"
                     />
+                    <Stack style={styles.whatweofferviewww}>
+                      <Text style={styles.whatweoffertexttt}>
+                        What We Offer
+                      </Text>
+                    </Stack>
+
+                    {/* carosel */}
+                    <Stack style={styles.container}>
+                      <Carousel
+                        pagination={(p) => {
+                          console.log(p);
+                          return (
+                            <Stack>
+                              <HStack
+                                alignSelf="center"
+                                justifyContent="center"
+                              >
+                                {[...Array(p.total).keys()].map((x) =>
+                                  p.currentPage === x + 1 ? (
+                                    <Center>
+                                      <Text style={styles.pagtexttt}></Text>
+                                    </Center>
+                                  ) : (
+                                    <Center>
+                                      <Text style={styles.pagdottexttt}>
+                                        {" "}
+                                        {"\u2022"}{" "}
+                                      </Text>
+                                    </Center>
+                                  )
+                                )}
+                              </HStack>
+                            </Stack>
+                          );
+                        }}
+                        renderItem={renderItem}
+                        data={DATA1}
+                        loop
+                        autoplay
+                        autoplayInterval={2500}
+                      />
+                    </Stack>
                   </Stack>
-                </Stack>
-              </Box>
+                </Box>
+              </Hidden>
             </>
           )}
         </>

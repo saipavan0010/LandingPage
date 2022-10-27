@@ -24,7 +24,7 @@ const WebThird = () => {
         <Box top={890}>
           <Image
             source={require("../assets/svg-mbl-web/the only app.png")}
-            style={{ width: vw(100), height: vh(120) }}
+            style={{ width: vw(100), height: vh(125) }}
             alt={"alternate text"}
             resizemode="cover"
             overflow={"hidden"}

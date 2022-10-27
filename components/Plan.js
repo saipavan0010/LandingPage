@@ -29,10 +29,10 @@ const Plan = () => {
   return (
     <>
       <Hidden only={["base", "sm", "md"]}>
-        <Box position={"absolute"} top={4690} width={"100%"}>
+        <Box position={"absolute"} top={4870} width={"100%"}>
           <Image
             source={require("../assets/three.png")}
-            h="864"
+            h="900"
             w="1600"
             position="absolute"
           />
