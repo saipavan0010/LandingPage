@@ -84,6 +84,15 @@ const Final = ({ navigation }) => {
         <FifthMobile />
       </VStack>
       <SixthWeb navigation={navigation} />
+
+      {/* <Stack
+        flex={1}
+        justifyContent={"center"}
+        alignItems={"center"}
+        backgroundColor="black"
+      >
+        <Text color={"white"}>Hello</Text>
+      </Stack> */}
     </NativeBaseProvider>
   );
 };
